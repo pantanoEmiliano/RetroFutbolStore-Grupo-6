@@ -1,0 +1,11 @@
+estilos de fuentes de googlefons que podriamos usar:
+<link href="https://fonts.googleapis.com/css?family=Arbutus&display=swap" rel="stylesheet">
+
+
+font-family: 'Arbutus', cursive;
+
+<link href="https://fonts.googleapis.com/css?family=Amarante&display=swap" rel="stylesheet">
+
+
+font-family: 'Amarante', cursive;
+

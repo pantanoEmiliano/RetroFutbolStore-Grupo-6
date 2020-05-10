@@ -1,0 +1,29 @@
+
+#titulo{
+    font-family: 'Arbutus', cursive;
+    text-align: center;
+    margin:10vh;
+    font-size: 7vh;
+    color: sienna;
+    text-shadow: snow;
+    
+   
+
+}
+.container-fluid{
+    background: rgb(12, 12, 12) fixed no-repeat 50% 50%;
+    background-size: cover;
+    background-image: url(imagenesretro/background-4.jpg);
+   
+}
+
+.navbar{
+    margin: 3vh;
+    margin-bottom: 8vh;
+    
+}
+
+footer{
+    margin: 5vh;
+}
+    
