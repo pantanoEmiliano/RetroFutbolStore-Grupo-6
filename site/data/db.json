@@ -1,0 +1,87 @@
+[
+	{
+		"id": 1,
+		"name": "Catalina",
+		"description": "Odia los ruidos fuertes, se lleva bien con los perros. Duerme Poco. Come bastante.",
+		"edad": 5,
+		"image": "gato001.jpg"
+	}, {
+		"id": 2,
+		"name": "Marcos",
+		"description": "Tiene tendencia a morder todo y cazar mariposas. Come poco. Ama los lugares cálidos.",
+		"edad": 0.5,
+		"image": "gato002.jpeg"
+	}, {
+		"id": 3,
+		"name": "Flufi",
+		"description": "Ama el atún en lata. Le gusta las largas siestas y cazar mariposas. Come poco. Ama los lugares cálidos.",
+		"edad": 0.3,
+		"image": "gato004.jpg"
+	}, {
+		"id": 4,
+		"name": "Hector",
+        "description": "Le gusta dormir en lugar altos. Come poco. Ama los lugares cálidos.",
+		"edad": 5,
+		"image": "gato005.jpeg"
+	}, {
+		"id": 5,
+		"name": "Firucat",
+		"description": "Odia su nombre. Le gusta las largas siestas y cazar mariposas. Come poco. Ama los lugares cálidos.",
+		"edad": 5,
+		"image": "gato006.jpg"
+	}, {
+		"id": 6,
+		"name": "Leonardo",
+		"description": "Le gusta las largas siestas y cazar mariposas. Come poco. Ama los lugares cálidos.",
+		"edad": 5,
+		"image": "gato007.jpg"
+	}, {
+		"id": 7,
+		"name": "Donatela",
+		"description": "Ama la música clásica. Le gusta las largas siestas y cazar mariposas. Come poco. Ama los lugares cálidos.",
+		"edad": 5,
+		"image": "gato008.jpg"
+	}, {
+		"id": 8,
+		"name": "Morron",
+		"description": "Se duerme en todos lados. Le gusta las largas siestas y cazar mariposas. Come poco. Ama los lugares cálidos.",
+		"edad": 5,
+		"image": "gato009.jpeg"
+	}, {
+		"id": 9,
+		"name": "Lima",
+		"description": "Odia que la acaricien. Le gusta las largas siestas y cazar mariposas. Come poco. Ama los lugares cálidos.",
+		"edad": 5,
+		"image": "gato015.jpeg"
+	}, {
+		"id": 10,
+		"name": "Felipe",
+		"description": "Salta muy alto, tiene el pelo muy suave. Come poco. Ama los lugares cálidos.",
+		"edad": 5,
+		"image": "gato010.jpg"
+	}, {
+		"id": 11,
+		"name": "Coco",
+		"description": "Responde al nombre, le digo ey! coco! y él viene. Le gusta las largas siestas y cazar mariposas. Come poco. Ama los lugares cálidos.",
+		"edad": 5,
+		"image": "gato011.jpg"
+	}, {
+		"id": 12,
+		"name": "Xuxa",
+		"description": "A Xuxa le encanta los mimos. Le gusta las largas siestas y cazar mariposas. Come poco. Ama los lugares cálidos.",
+		"edad": 5,
+		"image": "gato012.jpeg"
+	}, {
+		"id": 13,
+		"name": "Luis Miguel",
+		"description": "Es fuerte y se mueve mucho. Come poco. Ama los lugares cálidos.",
+		"edad": 5,
+		"image": "gato013.jpg"
+	}, {
+		"id": 14,
+		"name": "Garfield",
+		"description": "Le gusta las largas siestas y cazar mariposas. Come poco. Ama los lugares cálidos.",
+		"edad": 5,
+		"image": "0014.jpeg"
+	}
+]

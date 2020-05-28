@@ -1,0 +1,292 @@
+[
+    {
+        "id": 101,
+        "equipo": "Alemania",
+        "seleccion": "si",
+        "imagen": "alemania-1990",
+        "año": "1990",
+        "precio": "4300",
+        "talles":
+    }, {
+        "id": 102,
+        "equipo": "Argelia",
+        "seleccion": "si",
+        "imagen": "algerie-1982-7",
+        "año": "1982",
+        "precio": "4500",
+        "talles":
+    }, {
+        "id": 103,
+        "equipo": "Belgica",
+        "seleccion": "si",
+        "imagen":"Belgica 18",
+        "año": "2018",
+        "precio": "4300",
+        "talles": 
+    }, {
+        "id": 104,
+        "equipo": "Brazil",
+        "seleccion": "si",
+        "imagen":"Brasil 60",
+        "año": "1960",
+        "precio": "5000",
+        "talles": 
+    }, { 
+        "id": 105,
+        "equipo": "Colombia",
+        "seleccion": "si",
+        "imagen":"Colombia 2015",
+        "año": "2015",
+        "precio": "4300",
+        "talles": 
+    }, {
+        "id": 106,
+        "equipo": "Croacia",
+        "seleccion": "si",
+        "imagen":"Croacia 18",
+        "año": "2015",
+        "precio": "4300",
+        "talles": 
+    }, {
+        "id": 107,
+        "equipo": "España",
+        "seleccion": "si",
+        "imagen":"España 2012",
+        "año": "2012",
+        "precio": "4300",
+        "talles": 
+    }, {
+        "id": 108,
+        "equipo": "Francia",
+        "seleccion": "si",
+        "imagen":"Francia 86",
+        "año": "1986",
+        "precio": "4300",
+        "talles": 
+    }, {
+        "id": 109,
+        "equipo": "Ghana",
+        "seleccion": "si",
+        "imagen":"ghana-1980",
+        "año":"1980",
+        "precio": "4300",
+        "talles": 
+    }, {
+        "id": 110,
+        "equipo": "Holanda",
+        "seleccion": "si",
+        "imagen":,
+        "año": "1988",
+        "precio": "4100",
+        "talles": 
+    }, {
+        "id": 111,
+        "equipo": "Inglaterra",
+        "seleccion": "si",
+        "imagen":"inglaterra 82",
+        "año":"1982",
+        "precio": "3800",
+        "talles":
+    }, {
+        "id": 112,
+        "equipo": "Italia",
+        "seleccion": "si",
+        "imagen":"Italia 2016",
+        "año": "2016",
+        "precio": "4350",
+        "talles":
+    }, {
+        "id": 113,
+        "equipo": "Japon",
+        "seleccion": "si",
+        "imagen":"Japon 208",
+        "año": "2018",
+        "precio": "5300",
+        "talles":
+    }, {
+        "id": 114,
+        "equipo": "Mali",
+        "seleccion": "si",
+        "imagen":"Mali 80",
+        "año": "1980",
+        "precio": "4300",
+        "talles":
+    }, {
+        "id": 115,
+        "equipo": "Noruega",
+        "seleccion": "si",
+        "imagen":"Noruega 70",
+        "año": "1970",
+        "precio": "4300",
+        "talles":
+    }, {
+        "id": 116,
+        "equipo": "Portugal",
+        "seleccion": "si",
+        "imagen":"Portugal 10 sup",
+        "año": "2010",
+        "precio": "4000",
+        "talles": 
+    }, {
+        "id": 117,
+        "equipo": "Rusia",
+        "seleccion": "si",
+        "imagen":,
+        "año": "1980",
+        "precio": "4000",
+        "talles":
+    }, {
+        "id": 118,
+        "equipo": "Suiza",
+        "seleccion": "si",
+        "imagen":"Suiza 2015",
+        "año": "2015",
+        "precio": "4000",
+        "talles":
+    }, {
+        "id": 119,
+        "equipo": "Uruguay",
+        "seleccion": "si",
+        "imagen":"Uruguay 70",
+        "año": "1970",
+        "precio": "4000",
+        "talles":
+    }, {
+        "id": 120,
+        "equipo": "Estados Unidos",
+        "seleccion": "si",
+        "imagen":"usa-1950-7",
+        "año": "1950",
+        "precio": "4000",
+        "talles":
+    }, {
+        "id": 121,
+        "equipo": "Venezuela",
+        "seleccion": "si",
+        "imagen":"Venezuela 2015",
+        "año": "2015"
+        "precio": "4100",
+        "talles":
+    }, {
+        "id": 1,
+        "equipo": "Argentinos Jr",
+        "seleccion": "no", 
+        "imagen":,
+        "año": "1985",
+        "precio": "3300",
+        "talles":
+    }, {
+        "id": 2,
+        "equipo":"Banield",
+        "seleccion": "no",
+        "imagen":,
+        "año": "1995",
+        "precio": "3300",
+        "talles":
+    }, {
+        "id": 3,
+        "equipo": "Boca",
+        "seleccion": "no",
+        "imagen":,
+        "año": "1981",
+        "precio": "3300",
+        "talles":
+    },{
+        "id": 4,
+        "equipo": "Velez",
+        "seleccion": "no",
+        "imagen":,
+        "año":"2017",
+        "precio": "3300",
+        "talles":
+    },{
+        "id": 5,
+        "equipo": "Estudiantes",
+        "seleccion": "no",
+        "imagen":,
+        "año": "2006",
+        "precio": "3300",
+        "talles":
+    },{
+        "id": 6,
+        "equipo": "Ferro",
+        "seleccion": "no",
+        "imagen":,
+        "año": "2013",
+        "precio": "3300",
+        "talles":
+    },{
+        "id": 7,
+        "equipo": "Huracán",
+        "seleccion": "no",
+        "imagen":
+        "año": "1990",
+        "precio": "3300",
+        "talles":
+    },{
+        "id": 7,
+        "equipo": "Independiente"
+        "seleccion": "no",
+        "imagen":
+        "año": "1997",
+        "precio": "3300",
+        "talles":
+    },{
+        "id": 8,
+        "equipo":"Lanús",
+        "seleccion": "no",
+        "imagen":
+        "año": "2016",
+        "precio": "2900",
+        "talles":
+    },{
+        "id": 9,
+        "equipo": "Newells",
+        "seleccion": "no",
+        "imagen":
+        "año": "1991",
+        "precio": "3300",
+        "talles":
+    },{
+        "id": 10,
+        "equipo": "Platense",
+        "seleccion": "no",
+        "imagen":
+        "año":"1981",
+        "precio": "3800",
+        "talles":
+    },{
+        "id": 11,
+        "equipo": "Racing",
+        "seleccion": "no",
+        "imagen":
+        "año": "1981",
+        "precio": "3900",
+        "talles":
+    },{
+        "id": 12,
+        "equipo": "River",
+        "seleccion": "no",
+        "imagen":
+        "año": "2011",
+        "precio": "3300",
+        "talles":
+    },{
+        "id": 13,
+        "equipo": "Rosario Central",
+        "seleccion": "no",
+        "imagen":
+        "año":"1995",
+        "precio": "3300",
+        "talles":
+    },{
+        "id": 14,
+        "equipo": "San Lorenzo",
+        "seleccion": "no",
+        "imagen":
+        "año": "1992",
+        "precio": "3300",
+        "talles":"
+    }
+    
+]

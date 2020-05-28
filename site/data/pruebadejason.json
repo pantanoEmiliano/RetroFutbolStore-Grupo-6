@@ -1,0 +1,289 @@
+[
+    {
+        "id": 101,
+        "equipo": "Alemania",
+        "seleccion": "si",
+        "imagen": "alemania-1990.jpg",
+        "año": "1990",
+        "precio": "4300"
+
+    }, {
+        "id": 102,
+        "equipo": "Argelia",
+        "seleccion": "si",
+        "imagen": "algerie-1982-7.jpg",
+        "año": "1982",
+        "precio": "4500"
+
+    }, {
+        "id": 103,
+        "equipo": "Belgica",
+        "seleccion": "si",
+        "imagen":"Belgica 18.jpg",
+        "año": "2018",
+        "precio": "4300"
+
+    }, { "id": 104,
+         "equipo": "Brazil",
+         "seleccion": "si",
+         "imagen":"Brasil 60.jpg",
+         "año": "1960",
+         "precio": "5000"
+    
+    }, { 
+    "id": 105,
+    "equipo": "Colombia",
+    "seleccion": "si",
+    "imagen":"Colombia 2015.jpg",
+    "año": "2015",
+    "precio": "4300"
+
+    }, {
+    "id": 106,
+    "equipo": "Croacia",
+    "seleccion": "si",
+    "imagen":"Croacia 18.jpg",
+    "año": "2015",
+    "precio": "4300"
+    
+    }, {
+    "id": 107,
+    "equipo": "España",
+    "seleccion": "si",
+    "imagen":"España 2012.jpg",
+    "año": "2012",
+    "precio": "4300"
+
+}, {
+    "id": 108,
+    "equipo": "Francia",
+    "seleccion": "si",
+    "imagen":"Francia 86.jpg",
+    "año": "1986",
+    "precio": "4300"
+
+    }, {
+    "id": 109,
+    "equipo": "Ghana",
+    "seleccion": "si",
+    "imagen":"ghana-1980.jpg",
+    "año":"1980",
+    "precio": "4300"
+
+}, {
+    "id": 110,
+    "equipo": "Holanda",
+    "seleccion": "si",
+    "imagen":"holanda-retro.jpg",
+    "año": "1988",
+    "precio": "4100"
+  
+}, {
+    "id": 111,
+    "equipo": "Inglaterra",
+    "seleccion": "si",
+    "imagen":"inglaterra 82.jpg",
+    "año":"1982",
+    "precio": "3800"
+
+}, {
+    "id": 112,
+    "equipo": "Italia",
+    "seleccion": "si",
+    "imagen":"Italia 2016.jpg",
+    "año": "2016",
+    "precio": "4350"
+
+}, {
+    "id": 113,
+    "equipo": "Japon",
+    "seleccion": "si",
+    "imagen":"Japon 208.jpg",
+    "año": "2018",
+    "precio": "5300"
+
+}, {
+    "id": 114,
+    "equipo": "Mali",
+    "seleccion": "si",
+    "imagen":"Mali 80.jpg",
+    "año": "1980",
+    "precio": "4300"
+
+}, {
+    "id": 115,
+    "equipo": "Noruega",
+    "seleccion": "si",
+    "imagen":"Noruega 70.jpg",
+    "año": "1970",
+    "precio": "4300"
+
+}, {
+    "id": 116,
+    "equipo": "Portugal",
+    "seleccion": "si",
+    "imagen":"Portugal 10 sup.jpg",
+    "año": "2010",
+    "precio": "4000"
+
+},{
+    "id": 117,
+    "equipo": "Rusia",
+    "seleccion": "si",
+    "imagen": "rusia80.jpg",
+    "año": "1980",
+    "precio": "4000"
+
+}, {
+    "id": 118,
+    "equipo": "Suiza",
+    "seleccion": "si",
+    "imagen":"Suiza 2015.jpg",
+    "año": "2015",
+    "precio": "4000"
+
+}, {
+    "id": 119,
+    "equipo": "Uruguay",
+    "seleccion": "si",
+    "imagen":"Uruguay 70.jpg",
+    "año": "1970",
+    "precio": "4000"
+
+}, {
+    "id": 120,
+    "equipo": "Estados Unidos",
+    "seleccion": "si",
+    "imagen":"usa-1950-7.jpg",
+    "año": "1950",
+    "precio": "4000"
+
+}, {
+    "id": 121,
+    "equipo": "Venezuela",
+    "seleccion": "si",
+    "imagen":"Venezuela 2015.jpg",
+    "año": "2015",
+    "precio": "4100"
+
+}, {
+    "id": 1,
+    "equipo": "Argentinos Jr",
+    "seleccion": "no", 
+    "imagen": "argentinosjr 85.jpg",
+    "año": "1985",
+    "precio": "3300"
+
+}, {
+    "id": 2,
+    "equipo":"Banield",
+    "seleccion": "no",
+    "imagen": "BANFIELD 2012.png",
+    "año": "1995",
+    "precio": "3300"
+    
+ }, {
+    "id": 3,
+    "equipo": "Boca",
+    "seleccion": "no",
+    "imagen": "boca 81.jpg",
+    "año": "1981",
+    "precio": "3300"
+    
+},{
+    "id": 4,
+    "equipo": "Velez",
+    "seleccion": "no",
+    "imagen": "velez17.jpg",
+    "año":"2017",
+    "precio": "3300"
+    
+},{
+    "id": 5,
+    "equipo": "Estudiantes",
+    "seleccion": "no",
+    "imagen": "estudianteslp 06.jpg",
+    "año": "2006",
+    "precio": "3300"
+    
+},{
+    "id": 6,
+    "equipo": "Ferro",
+    "seleccion": "no",
+    "imagen": "ferro 13.jpg",
+    "año": "2013",
+    "precio": "3300"
+    
+},{
+    "id": 7,
+    "equipo": "Huracán",
+    "seleccion": "no",
+    "imagen": "huracan 90.jpg",
+    "año": "1990",
+    "precio": "3300"
+    
+},{
+    "id": 7,
+    "equipo": "Independiente",
+    "seleccion": "no",
+    "imagen":"independiente 97.jpg",
+    "año": "1997",
+    "precio": "3300"
+    
+},{
+    "id": 8,
+    "equipo":"Lanús",
+    "seleccion": "no",
+    "imagen": "lanus 16.jpg",
+    "año": "2016",
+    "precio": "2900"
+    
+},{
+    "id": 9,
+    "equipo": "Newells",
+    "seleccion": "no",
+    "imagen": "newells 91.jpg",
+    "año": "1991",
+    "precio": "3300"
+    
+},{
+    "id": 10,
+    "equipo": "Platense",
+    "seleccion": "no",
+    "imagen": "Platense 81.jpg",
+    "año":"1981",
+    "precio": "3800"
+    
+},{
+    "id": 11,
+    "equipo": "Racing",
+    "seleccion": "no",
+    "imagen": "Racing 81.jpg",
+    "año": "1981",
+    "precio": "3900"
+    
+},{
+    "id": 12,
+    "equipo": "River",
+    "seleccion": "no",
+    "imagen": "river 2011.jpg",
+    "año": "2011",
+    "precio": "3300"
+    
+},{
+    "id": 13,
+    "equipo": "Rosario Central",
+    "seleccion": "no",
+    "imagen": "rosariocentral 95.jpg",
+    "año":"1995",
+    "precio": "3300"
+    
+},{
+    "id": 14,
+    "equipo": "San Lorenzo",
+    "seleccion": "no",
+    "imagen": "san Lorenzo 92.png",
+    "año": "1992",
+    "precio": "3300"
+    
+}]

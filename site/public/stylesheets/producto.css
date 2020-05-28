@@ -1,0 +1,36 @@
+
+
+.container-fluid{
+    background: rgb(12, 12, 12) fixed no-repeat 50% 50%;
+    background-size: cover;
+    background-image: url(/images/3.jpg);
+   
+}
+#pr{
+    margin-top: 10vh;
+}
+
+.navbar{
+    
+    margin: 3vh;
+    margin-bottom: 8vh;
+    
+}
+
+footer{
+    margin: 5vh;
+}
+h1{
+    
+    color: white;
+    font-size: 70px;
+    margin-top: 35px;
+    
+}
+ #titulo{
+    
+    color: white;
+    font-size: 70px;
+    margin-top: 35px;
+    
+}

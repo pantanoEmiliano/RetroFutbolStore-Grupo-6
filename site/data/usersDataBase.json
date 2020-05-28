@@ -1,0 +1,30 @@
+[
+ {
+  "id": 1,
+  "email": "otroemail"
+ },
+ {
+  "id": 2,
+  "name": "Joaquin",
+  "lastname": "Di Toma",
+  "password": "$2b$10$9DB2pGwGuwwhBqRU2mg07OZlyYo2EuvYGBBxN5SaDrMx20FmSrTGO",
+  "email": "joacoditoma@gmail.com",
+  "avatar": "1589588637418.jpeg"
+ },
+ {
+  "id": 3,
+  "name": "Carlos",
+  "lastname": "García",
+  "password": "$2b$10$jVjvBb9Re3VoYQYX0Tz4l.u4h7rpA0yK7MWyTRBVMFq65zwsXacMy",
+  "email": "carlitos@gmail.com",
+  "avatar": "1589588747274.jpeg"
+ },
+ {
+  "id": 4,
+  "name": "Felipe",
+  "lastname": "Galope",
+  "password": "$2b$10$cyu2FV8dXZ/etRNLoEEkaODopgeRscCNmAgzwVPfhdlCzOucyJtDe",
+  "email": "felipe@gmail.com",
+  "avatar": "1589589791344.jpeg"
+ }
+]
