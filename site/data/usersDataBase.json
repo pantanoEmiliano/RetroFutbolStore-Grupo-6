@@ -26,5 +26,19 @@
   "password": "$2b$10$cyu2FV8dXZ/etRNLoEEkaODopgeRscCNmAgzwVPfhdlCzOucyJtDe",
   "email": "felipe@gmail.com",
   "avatar": "1589589791344.jpeg"
+ },
+ {
+  "id": 5,
+  "name": "emiliano",
+  "lastname": "pantano",
+  "password": "$2b$10$3mDtYglBJzZbOBwBxlKpq.HzOpjqDR2s7ST5pSc2Wr3.N9A/KrH.u",
+  "email": "pantano_47@hotmail.com"
+ },
+ {
+  "id": 6,
+  "name": "emiliano",
+  "lastname": "pantano",
+  "password": "$2b$10$e6cJNlqCm7Dejr3zNLzwQOYdrqc3Esolf/G3XZf4Snk4/Iqm4c3au",
+  "email": "pantano_47@hotmail.com"
  }
 ]

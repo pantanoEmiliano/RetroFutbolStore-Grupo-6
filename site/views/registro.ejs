@@ -16,7 +16,7 @@
             <div class="container">
                 <div class="row" >
                     <div class="col 4"><img src="/images/logo-retro.jpg" alt="" class="rounded-circle" width="50%"> </div>
-                    <div class="col-8"><h1 "id"="titulo"> RetroFutbolStore</h1></div>
+                    <div class="col-8"><h1 id="titulo"> RetroFutbolStore</h1></div>
                 </div>
         
                 <%- include("./partials/nuevomenu") %>
@@ -39,28 +39,28 @@
             </div>
     
            
-            <form action="registrar.php" method="post" class="form-register">
+            <form action="/registro" method="POST" class="form-register">
             
                 <h2 class="form__titulo">REGISTRATE</h2>
                 
                 <div class="contenedor-inputs">
                     
-                    <input type="text" name="nombre"  placeholder="Nombre" class="input-48" required>
+                    <input type="text" name="name"  placeholder="Nombre" class="input-48" required>
                     
-                    <input type="text" name="apellido" placeholder="Apellido" class="input-48" required>
+                    <input type="text" name="lastname" placeholder="Apellido" class="input-48" required>
                     
-                    <input type="email" name="correo" placeholder="Correo" class="input-100" required>
+                    <input type="email" name="email" placeholder="Correo" class="input-100" required>
                     
-                    <input type="text" name="usuario" placeholder="Usuario" class="input-48" required>
+                    <input type="text" name="users" placeholder="Usuario" class="input-48" required>
                     
-                    <input type="password" name="clave" placeholder="Contraseña" class="input-48" required>
+                    <input type="password" name="password" placeholder="Contraseña" class="input-48" required>
                     
                     <input type="text" name="telefono" placeholder="Telefono" class="input-100" required>
                     
-                    <input type="submit" value="Registrar" class="btn-enviar">
+                    <input type="submit" value="Registrate" class="btn-enviar">
                     
                     
-                    <p class="form_link">¿Ya tienes una cuenta?<a href="#"> Ingresa Aqui</a></p>
+                    <p class="form_link">¿Ya tienes una cuenta?<a href="/controllers/usersController.js"> Ingresa Aqui</a></p>
                 
             </form>
     
@@ -70,21 +70,15 @@
             
         </div>
       
-        <footer>
-            <div class="row">
-                <div class="col-6 text-black-50"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quaerat omnis dicta alias, velit, sunt eaque nisi maiores architecto esse tempora saepe dolorum rem repudiandae magni voluptate "id" eum! Et.</div>
-                <div class="col-6 text-black-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, fugiat veniam et architecto, ducimus nihil libero laborum repudiandae porro consequatur sed aliquam quas recusandae sequi aspernatur, quidem non. Dicta, fugit?</div>
-                  <i class="fab fa-facebook"></i>
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-                  <i class="fab fa-twitter"aria-hidden="true"></i>
-            </div>
-        </footer>
+        
     </div>
 
   </div> 
   
 
-
+  <footer>
+    <%- include('partials/footer'); %>
+</footer>
 
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

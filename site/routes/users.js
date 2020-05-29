@@ -22,6 +22,7 @@ router.get('/create/', usersController.root); /* GET - Form to create */
 router.post('/create/', upload.any(), usersController.store); /* POST - Store in DB */
 
 router.get('/login/', usersController.login); /* GET - Form to create */
-router.post('/login/', usersController.validate); /* Post - Validation login */
+router.post('/login/', usersController.validate);
+router.post('/registro', usersController.store); /* Post - Validation login */
 
 module.exports = router;

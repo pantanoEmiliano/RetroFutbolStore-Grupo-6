@@ -1,6 +1,13 @@
 const fs = require('fs');
 const path = require('path');
-
+const controller = {
+  crearProducto:(req, res) =>{
+    res.render("productoCrear")
+  },
+  guardarProducto:(req,res)=>{
+    res.redirect("/")
+  },
+}
 const productoController = (req, res) => {
   const pathCamisetas = path.join(__dirname, '../data/pruebadejason.json');
   const camisetas = JSON.parse(fs.readFileSync(pathCamisetas, 'utf-8'));

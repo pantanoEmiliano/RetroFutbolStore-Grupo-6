@@ -7,7 +7,7 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const controller = {
     root: (req, res) => {
-        res.render('register');
+        res.render('registro');
     },
     store: (req, res, next) => {
         const newUser = {
@@ -16,10 +16,11 @@ const controller = {
             lastname: req.body.lastname,
             password: bcrypt.hashSync(req.body.password, 10),
             email: req.body.email,
-            avatar: req.files[0].filename
-        };
+            //avatar: req.files[0].filename
+            };
+            
 
-        // console.log(...users);
+     //console.log(...users);
 
         const userToSave = [...users, newUser];
         fs.writeFileSync(usersFilePath, JSON.stringify(userToSave, null, ' '));
