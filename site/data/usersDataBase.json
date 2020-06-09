@@ -40,5 +40,10 @@
   "lastname": "pantano",
   "password": "$2b$10$e6cJNlqCm7Dejr3zNLzwQOYdrqc3Esolf/G3XZf4Snk4/Iqm4c3au",
   "email": "pantano_47@hotmail.com"
+ },
+ {
+  "id": 7,
+  "password": "$2b$10$GmPObvPAGvCupptT1i2YpefnzfJSDJ003aibAoG3u3mVrDxuWaxbm",
+  "email": "pantano_47@hotmail.com"
  }
 ]

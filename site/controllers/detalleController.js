@@ -4,7 +4,7 @@ const path = require('path');
 const detalleController = (req, res) => {
   const id = req.params.id;
 
-  const pathCamisetas = path.join(__dirname, '../data/pruebadejason.json');
+  const pathCamisetas = path.join(__dirname, '../data/productosDataBase.json');
   const camisetas = JSON.parse(fs.readFileSync(pathCamisetas, 'utf-8'));
 
   const camiseta = camisetas.find((individuo) => {

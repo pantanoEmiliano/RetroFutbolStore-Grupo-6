@@ -2,6 +2,16 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const path = require('path');
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, 'public/images');
+    },
+    filename: (req, file, cb) => {
+        cb(null, Date.now() + path.extname(file.originalname));
+    }
+});
+const upload = multer({ storage: storage })
+
 
 const indexController = require("../controllers/indexController")
 const contactoController = require("../controllers/contactoController")
@@ -10,24 +20,24 @@ const productoController = require("../controllers/productoController")
 const carritoController = require("../controllers/carritoController")
 const detalleController = require('../controllers/detalleController.js')
 const usersController = require("../controllers/usersController.js")
+const createController = require("../controllers/createController")
+
 /* GET home page. */
+
 router.get('/', indexController);
 router.get('/contacto', contactoController);
 router.get('/registro', registroController);
 router.get("/producto", productoController);
 router.get("/carrito", carritoController);
 router.get('/detalle/:id', detalleController);//muestra detalle de producto
-//router.get("/crear", productoController.crearProducto);lleva a formulario de carga de producto
-//router.post("/crear", productoController.guardarProducto);crea poducto
-router.post("/registro", usersController.store);
-//router.post("/registro", usersController.validate);
-//router.post("/registro", usersController.login);
-//router.post("/registro", usersController.root);
-
-router.get('/create/', usersController.root); /* GET - Form to create */
-//router.post('/create/', upload.any(), usersController.store); /* POST - Store in DB */
-
+router.get('/create', createController.crearProducto); /* GET - Vista del formulario create */
 router.get('/login/', usersController.login); /* GET - Form to create */
+
+
+
+
+router.post('/create', upload.any(), createController.guardarProducto); //Viaja por POST guarda nuevo producto
+router.post("/registro", usersController.store);//Viaja pòr POST crea nuevo usuario
 router.post('/login/', usersController.validate); /* Post - Validation login */
 
 

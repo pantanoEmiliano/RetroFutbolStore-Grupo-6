@@ -6,32 +6,38 @@ const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const controller = {
+    //crea controlador con sus propiedades
+
     root: (req, res) => {
-        res.render('registro');
+        res.render('registro');    //viaja por get a la vista de form de registro
     },
-    store: (req, res, next) => {
+    store: (req, res, next) => {     
         const newUser = {
             id: users[users.length - 1].id + 1,
-            name: req.body.name,
+            name: req.body.name,              //crea un nuevo usuario tomando los datos recibidos por los input del form
             lastname: req.body.lastname,
-            password: bcrypt.hashSync(req.body.password, 10),
+            password: bcrypt.hashSync(req.body.password, 10),//modulo bcrypt encripta el password del usuario 
             email: req.body.email,
-            //avatar: req.files[0].filename
+            
             };
             
 
-     //console.log(...users);
+     
 
         const userToSave = [...users, newUser];
         fs.writeFileSync(usersFilePath, JSON.stringify(userToSave, null, ' '));
         res.redirect('/');
     },
+    
     login: (req, res) => {
         res.render('login');
     },
+
+    //tarea pendiente: la logica de la propiedad login esta terminada falta agregar la vista del loguin y las funcionalidades
+    
     validate: (req, res) => {
         // Validar la contraseña utilizando bcrypt.compareSync()
-             // mostrar la view de login con un error.
+        // muestra la vista de login con un error.
         // Redireccionar a la home
         const email = req.body.email;
         const password = req.body.password;

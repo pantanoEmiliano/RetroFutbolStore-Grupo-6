@@ -23,12 +23,12 @@
                 <% for(camiseta of nacionales) { %>
                     <div class="col-md-4">
                         <div class="card mb-4 shadow-sm">
-                            <img src="/images/<%= camiseta.imagen %>" width="100%">
+                            <a href="/detalle/<%= camiseta.id %>"><img src="/images/<%= camiseta.imagen %>" width="100%"></a>
                             <div class="card-body">
-                                <a href="/detalle/<%= camiseta.id %>">
-                                    <h5 class="card-title"><%= camiseta.equipo %></h5>
-                                </a>
-                                <p class="card-text"><%= camiseta.precio %></p>
+                                
+                                    <h5 class="card-title">Camiseta: <%= camiseta.equipo %></h5>
+                                
+                                <p class="card-text">Precio: <%= camiseta.precio %></p>
                             </div>
                         </div>
                     </div>
@@ -41,12 +41,12 @@
                     <% for(camiseta of internacionales) { %>
                         <div class="col-md-4">
                             <div class="card mb-4 shadow-sm">
-                                <img src="/images/<%=camiseta.imagen %>" width="100%">
+                                <a href="/detalle/<%= camiseta.id %>"><img src="/images/<%=camiseta.imagen %>" width="100%"></a>
                                 <div class="card-body">
-                                    <a href="/detalle/<%= camiseta.id %>">
-                                        <h5 class="card-title"><%= camiseta.equipo %></h5>
-                                    </a>
-                                    <p class="card-text"><%= camiseta.precio %></p>
+                                    
+                                        <h5 class="card-title">Camiseta: <%= camiseta.equipo %></h5>
+                                  
+                                    <p class="card-text">Precio: <%= camiseta.precio %></p>
                                 </div>
                             </div>
                         </div>
