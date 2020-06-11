@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +7,7 @@
     <link rel="stylesheet" href="/stylesheets/registo.css">
     <link href="https://fonts.googleapis.com/css?family=Passion+One:700&display=swap" rel="stylesheet">
 
-    <title>Registro</title>
+    <title>Users</title>
 </head>
 <body>
     <div class="container-fluid">
@@ -38,43 +37,8 @@
               <div class="tab-pane container fade" "id"="menu2">...</div>
             </div>
     
-           <% if (typeof errors != "undefined") { %>
-            <ul>
-                <% for(let i=0; i = errors.length; i++) { %>
-                    <li>
-                        <%=errors[i]%>
-                    </li>
-                    <%  }  %>
-            </ul>
-            <%  }  %>
-
-
-            <form action="/registro" method="POST" class="form-register" enctype="multipart/form-data">
+           
             
-                <h2 class="form__titulo">REGISTRATE</h2>
-                
-                <div class="contenedor-inputs">
-                    
-                    <input type="text" name="name"  placeholder="Nombre" class="input-48" required>
-                    
-                    <input type="text" name="lastname" placeholder="Apellido" class="input-48" >
-                    
-                    <input type="email" name="email" placeholder="Correo" class="input-100" required>
-                    
-                    <input type="text" name="users" placeholder="Usuario" class="input-48" required>
-                    
-                    <input type="password" name="password" placeholder="Contraseña" class="input-48" required>
-                    
-                    <input type="text" name="telefono" placeholder="Telefono" class="input-100" required>
-
-                    <input type="file" name="avatar" placeholder="avatar" class="input-48" required>
-                    
-                    <input type="submit" value="Registrate" class="btn-enviar">
-                    
-                    
-                    <p class="form_link" >¿Ya tienes una cuenta?<a href="/users/login"> Ingresa Aqui</a></p>
-                
-            </form>
     
     
             

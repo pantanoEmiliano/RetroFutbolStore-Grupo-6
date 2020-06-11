@@ -300,5 +300,13 @@
   "precio": "4500",
   "año": "2019",
   "imagen": "1591718818979.jpg"
+ },
+ {
+  "id": 20,
+  "equipo": "URSS",
+  "seleccion": "si",
+  "precio": "2000",
+  "año": "1982",
+  "imagen": "1591802873745.jpg"
  }
 ]

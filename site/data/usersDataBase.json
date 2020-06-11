@@ -45,5 +45,81 @@
   "id": 7,
   "password": "$2b$10$GmPObvPAGvCupptT1i2YpefnzfJSDJ003aibAoG3u3mVrDxuWaxbm",
   "email": "pantano_47@hotmail.com"
+ },
+ {
+  "id": 8,
+  "password": "$2b$10$RfY6yNbzEQaJQRY1.PfA5.y2bN9jRKwEDQW0HdpLsnM8zQWrkd2y2",
+  "email": "luisalberto@crack.cpm"
+ },
+ {
+  "id": 9,
+  "name": "susana",
+  "lastname": "horia",
+  "password": "$2b$10$sg23KylfFUoeXuftvgdx9e2BIiQFodFSmgxBdDcfRatRM3QF2kZNK",
+  "email": "susana@horia.com"
+ },
+ {
+  "id": 10,
+  "name": "weqw",
+  "lastname": "horia",
+  "password": "$2b$10$FgMopfGaWhsXntuiAGFbZegeWsKXgMpM0ot.Q2PWUY8XoSlJxYyZy",
+  "email": "pantano_47@hotmail.com",
+  "avatar": "1591802202584.png"
+ },
+ {
+  "id": 11,
+  "name": "susana",
+  "lastname": "horia",
+  "password": "$2b$10$JjP/QZVkTJuQhHg9e6ets.0AV73CSkRSz1N6/z4NWDJ9Ml/cOEePq",
+  "email": "susana@horia.com",
+  "avatar": "1591802496704.png"
+ },
+ {
+  "id": 12,
+  "name": "ricardo",
+  "lastname": "ruben",
+  "password": "$2b$10$iKTOjDqgbnvJlnnYTrT2tesGBcYN.Agczexux4hgGGrDEuH15Wuqy",
+  "email": "ricardo@ruben.com",
+  "avatar": "1591804998213.png"
+ },
+ {
+  "id": 13,
+  "name": "ricardo",
+  "lastname": "ruben",
+  "password": "$2b$10$433Jm.7zLvXdu7ZtAicpDeNB.2ca8T/mM6o1WUL272LWKmeugrha6",
+  "email": "ricardo@ruben.com",
+  "avatar": "1591805114533.png"
+ },
+ {
+  "id": 14,
+  "name": "ricardo",
+  "lastname": "ruben",
+  "password": "$2b$10$5S83lUBR1dni6KrrDYxfy.au8RHfpbCDcO5KU71cVCSAJTGa2Kx6e",
+  "email": "ricardo@ruben.com",
+  "avatar": "1591805200418.png"
+ },
+ {
+  "id": 15,
+  "name": "weqw",
+  "lastname": "horia",
+  "password": "$2b$10$yCytPBPBqMkRuwvohBtaN.U4Qeat8OQ.O.0KpSz/rNE6yxY/DBKN.",
+  "email": "ricardo@ruben.com",
+  "avatar": "1591806557373.png"
+ },
+ {
+  "id": 16,
+  "name": "susana",
+  "lastname": "pantano",
+  "password": "$2b$10$WL0XYczV2W8aK8K9EtWaiOxNYT0BKsJScpSdJqXE5/b6o6b.aQAGG",
+  "email": "susana@horia.com",
+  "avatar": "1591807150369.png"
+ },
+ {
+  "id": 17,
+  "name": "weqw",
+  "lastname": "",
+  "password": "$2b$10$s94qA22tI1rdBswdJN2Qw.OWbgtuTT.WYwvGf1x7q1YMtA17YeJj2",
+  "email": "ricardo@ruben.com",
+  "avatar": "1591807183902.png"
  }
 ]
