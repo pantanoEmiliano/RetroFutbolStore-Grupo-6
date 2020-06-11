@@ -10,7 +10,19 @@ const storage = multer.diskStorage({
     cb(null, Date.now() + path.extname(file.originalname));
   },
 });
+
 const upload = multer({ storage: storage });
+
+const ustorage = multer.diskStorage({
+    destination: (req, file, cb) => {
+      cb(null, "public/images/users");
+    },
+    filename: (req, file, cb) => {
+      cb(null, Date.now() + path.extname(file.originalname));
+    },
+  });
+  
+  const uupload = multer({ storage: ustorage });
 
 const indexController = require("../controllers/indexController");
 const contactoController = require("../controllers/contactoController");
@@ -39,12 +51,15 @@ router.get("/login/", usersController.login); /* GET - Form to create */
 router.get("/users", usersController.root);
 
 router.post("/create", upload.any(), createController.guardarProducto); //Viaja por POST guarda nuevo producto
-router.post("/registro",upload.any(),logDBMiddleware,
+router.post("/registro",uupload.any(),logDBMiddleware,
   [
-    check("name").isLength(),
-    check("lastname").isLength({ min: 1 }),
-    check("password").isLength({ min: 6 }),
-    check("email").isEmail(),
+    check("name").isLength({ min: 1 }).withMessage("Nombre: Este campo tiene que estar completo"),
+    check("lastname").isLength({ min: 1 }).withMessage("Apellido: Este campo tiene que estar completo"),
+    check("username").isLength({ min: 1 }).withMessage("Usuario: Este campo tiene que estar completo"),
+    check("email").isEmail().withMessage("Correo: Email: Este campo tiene que estar completo"),
+    check("password").isLength({ min: 6 }).withMessage("Password: Minimo de 6 caracteres"),
+    check("telefono").isEmail().withMessage("Telefono: Email: Este campo tiene que estar completo"),
+    
   ],
   usersController.store
 ); //Viaja pòr POST crea nuevo usuario

@@ -121,5 +121,38 @@
   "password": "$2b$10$s94qA22tI1rdBswdJN2Qw.OWbgtuTT.WYwvGf1x7q1YMtA17YeJj2",
   "email": "ricardo@ruben.com",
   "avatar": "1591807183902.png"
+ },
+ {
+  "id": 18,
+  "name": "almafuerte",
+  "lastname": "asd",
+  "password": "$2b$10$oF0tOFNr5rbnMyAPNqzyVuHkxtp5A9Xi0qr4Xn08zn7gYou9A0X2W",
+  "email": "nose@mail.com",
+  "avatar": "1591883922350.png"
+ },
+ {
+  "id": 19,
+  "name": "hola",
+  "lastname": "como",
+  "password": "$2b$10$HwPklj3sEjlpV0F5cpnZvO9M1Y7P8YZQO5XhgOdEfgIfhK76aQUmW",
+  "email": "estas@mail.com",
+  "avatar": "1591884589281.png"
+ },
+ {
+  "id": 20,
+  "name": "",
+  "lastname": "pantano",
+  "password": "$2b$10$YYKuDU03h3E7PxMaBdsm/ONn7D4uVBqVaq9al0KaeLqc/0vvU2ohy",
+  "email": "pantano_47@hotmail.com",
+  "avatar": "1591886982618.png"
+ },
+ {
+  "id": 21,
+  "name": "emiliano",
+  "lastname": "pantano",
+  "email": "pantano_47@hotmail.com",
+  "password": "$2b$10$ATzZFKvuQnALOWvNxqPzGuwtpvV.FVsccPYLl8IoIxYCA3Zo5Ihna",
+  "telefono": "123456",
+  "avatar": "1591887831987.png"
  }
 ]

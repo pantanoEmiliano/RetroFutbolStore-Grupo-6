@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const bcrypt = require("bcrypt");
+const multer = require("multer");
 const { check, validationResult, body } = require("express-validator");
 
 const controller = {
@@ -19,8 +20,10 @@ const controller = {
         id: users[users.length - 1].id + 1,
         name: req.body.name, //crea un nuevo usuario tomando los datos recibidos por los input del form
         lastname: req.body.lastname,
-        password: bcrypt.hashSync(req.body.password, 10), //modulo bcrypt encripta el password del usuario
+        username: req.body.username,
         email: req.body.email,
+        password: bcrypt.hashSync(req.body.password, 10), //modulo bcrypt encripta el password del usuario
+        telefono: req.body.telefono,
         avatar: req.files[0].filename,
       };
 

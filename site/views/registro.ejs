@@ -25,7 +25,7 @@
                 
                 </div>
            
-          
+         
         
       
 
@@ -38,16 +38,17 @@
               <div class="tab-pane container fade" "id"="menu2">...</div>
             </div>
     
-           <% if (typeof errors != "undefined") { %>
-            <ul>
-                <% for(let i=0; i = errors.length; i++) { %>
-                    <li>
-                        <%=errors[i]%>
-                    </li>
-                    <%  }  %>
-            </ul>
-            <%  }  %>
-
+           
+            <% if (typeof errors != "undefined")  { %>
+                <p style="color: red;">Error</p>
+                <ul>
+                    <% for (let i = 0; i < errors.length; i++) { %>
+                        <li>
+                            <%= errors[i].msg %>
+                        </li>
+                    <% } %>
+                </ul>
+            <% } %>
 
             <form action="/registro" method="POST" class="form-register" enctype="multipart/form-data">
             
@@ -55,24 +56,24 @@
                 
                 <div class="contenedor-inputs">
                     
-                    <input type="text" name="name"  placeholder="Nombre" class="input-48" required>
+                    <input type="text" name="name"  placeholder="Nombre" class="input-48" >
                     
                     <input type="text" name="lastname" placeholder="Apellido" class="input-48" >
                     
-                    <input type="email" name="email" placeholder="Correo" class="input-100" required>
+                    <input type="email" name="email" placeholder="Correo" class="input-100" >
                     
-                    <input type="text" name="users" placeholder="Usuario" class="input-48" required>
+                    <input type="text" name="username" placeholder="Usuario" class="input-48" >
                     
-                    <input type="password" name="password" placeholder="Contraseña" class="input-48" required>
+                    <input type="password" name="password" placeholder="Contraseña" class="input-48" >
                     
-                    <input type="text" name="telefono" placeholder="Telefono" class="input-100" required>
+                    <input type="text" name="telefono" placeholder="Telefono" class="input-100" >
 
-                    <input type="file" name="avatar" placeholder="avatar" class="input-48" required>
+                    <input type="file" name="avatar" placeholder="avatar" class="input-48" required >
                     
                     <input type="submit" value="Registrate" class="btn-enviar">
                     
                     
-                    <p class="form_link" >¿Ya tienes una cuenta?<a href="/users/login"> Ingresa Aqui</a></p>
+                    <p  class="form_link" style="color: black;" >¿Ya tienes una cuenta?<a href="/users/login"style="color: black;"> Ingresa Aqui</a></p>
                 
             </form>
     
