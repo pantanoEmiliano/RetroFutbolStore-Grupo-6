@@ -38,7 +38,20 @@
             </div>
     
            
-            
+            <h1>Bienvenido:</h1>
+            <% for(user of users) { %>
+                <div class="col-4 ">
+                    <div class="card mb-4 shadow-sm ">
+                        
+                        <div class="card-body">
+                            <img src="/images/users<%= user.avatar %>" width="100%">
+                            <h5 style="text-align: center;" class="card-title" >Nombre: <%= user.name %></h5>
+                            
+                            <p style="text-align: center;" class="card-text">Apellido: <%= user.lastname %></p>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
     
     
             
@@ -47,15 +60,12 @@
         </div>
       
         
+        <footer>
+            <%- include('partials/footer'); %>
+        </footer>
     </div>
 
   </div> 
-  
-
-  <footer>
-    <%- include('partials/footer'); %>
-</footer>
-
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

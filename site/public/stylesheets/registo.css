@@ -2,10 +2,6 @@
     box-sizing: border-box;
 }
 
-
-
-
-
 h1{
     
     color: white;
@@ -91,9 +87,7 @@ input{
     margin-bottom: 8vh;
     
 }
-footer{
-    margin: 5vh;
-}
+
 #titulo{
   
   color: white;

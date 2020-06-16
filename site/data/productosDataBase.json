@@ -308,5 +308,13 @@
   "precio": "2000",
   "año": "1982",
   "imagen": "1591802873745.jpg"
+ },
+ {
+  "id": 21,
+  "equipo": "bielorusia",
+  "seleccion": "no",
+  "precio": "3000",
+  "año": "2018",
+  "imagen": "1591892290866.jpg"
  }
 ]

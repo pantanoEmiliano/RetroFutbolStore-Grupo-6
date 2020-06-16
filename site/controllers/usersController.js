@@ -29,7 +29,7 @@ const controller = {
 
       const userToSave = [...users, newUser];
       fs.writeFileSync(usersFilePath, JSON.stringify(userToSave, null, " "));
-      res.redirect("/producto");
+      res.redirect("/login");
     } else {
       res.render("registro", { errors: errors.errors });
     }
@@ -41,30 +41,50 @@ const controller = {
 
   //tarea pendiente: la logica de la propiedad login esta terminada falta agregar la vista del loguin y las funcionalidades
 
-  validate: (req, res) => {
+  validate: (req, res, next) => {
     // Validar la contraseña utilizando bcrypt.compareSync()
     // muestra la vista de login con un error.
     // Redireccionar a la home
-    const email = req.body.email;
-    const password = req.body.password;
+    let errors = validationResult(req);
+    if (errors.isEmpty()){
+      const usersFilePath = path.join(__dirname, "../data/usersDataBase.json");
+      const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
+      if (users == ""){
+        users = [];
+      } else{
+         const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
+      }
+      
+      let ALoguearse
+      
+      for(let i = 0; i < users.length; i++){
+        if (users[i].email == req.body.email){
+          if(bcrypt.compareSync(req.body.password, users[i].password)){
+             ALoguearse = users[i];
+            break;
+          }
+        }
+      }
+      if (ALoguearse == undefined){
+        res.render("login", { errors: [{msg: "Credenciales invalidas"}
+      
+      ]});
+      }
 
-    const user = users.find((user) => {
-      return user.email == email;
-    });
+      req.session.usuarioLogueado = ALoguearse;
+        if(req.body.recordame != undefined){
+          res.cookie("recordame", ALoguearse.email,{ maxAge: 600000})
+        }
 
-    if (!user) {
-      res.render("login", {
-        error: "Usuario no encontrado!",
-      });
+      res.render("index");
+
+    }else {
+     return res.render("login", { errors: errors.errors });
     }
-    if (!bcrypt.compareSync(password, user.password)) {
-      res.render("login", {
-        error: "Password incorrecto!",
-      });
     }
 
-    res.send(user);
-  },
+    
+  
 };
 
 module.exports = controller;

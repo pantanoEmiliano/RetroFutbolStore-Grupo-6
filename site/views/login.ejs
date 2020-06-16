@@ -1,54 +1,99 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  
-  
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/registo.css">
+    <link href="https://fonts.googleapis.com/css?family=Passion+One:700&display=swap" rel="stylesheet">
+
+    <title>Login</title>
 </head>
 <body>
-  <div class="container-fluid">
-    <div class="container">
-      <div class="row" >
-        <div class="col 4"><img src="/images/logo-retro.jpg" alt="" class="rounded-circle" width="50%"> </div>
-        <div class="col-8"><h1 id="titulo"> RetroFutbolStore</h1></div>
-      </div>
-              <%- include("./partials/nuevomenu") %>
-       
-			  <div class="row">
-				<div class="col-12">
-					<h2 class="products-title">Ingresar</h2>
-				</div>
-			</div>
-			
-				<form action="/registro" method="POST">
-					<div class="row product-detail">
-						<div class="col-12 col-md-6">
-							<label for="email" class="form-label">E-Mail:</label>
-							<input type="text" id="email" name="email" placeholder="Ej: carlos@mercadoliebre.com" class="form-input">
-						</div>
-						<div class="col-12 col-md-6">
-							<label for="password" class="form-label">Password:</label>
-							<input type="password" id="password" name="password" class="form-input">
-						</div>
-						<div class="col-12">
-							<button type="submit" class="buy-now-button">Ingresar</button>
-						</div>
-					</div>
-				</form>
-			</div>
-   
-  
- 
-  
-<footer>
-  <%- include('partials/footer'); %>
-</footer>
-  
-  <script src="https://use.fontawesome.com/e52c2df0af.js"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  
+    <div class="container-fluid">
+      
+            <div class="container">
+                <div class="row" >
+                    <div class="col 4"><img src="/images/logo-retro.jpg" alt="" class="rounded-circle" width="50%"> </div>
+                    <div class="col-8"><h1 id="titulo"> RetroFutbolStore</h1></div>
+                </div>
+        
+                <%- include("./partials/nuevomenu") %>
+                
+                <!-- Tab panes -->
+                
+                </div>
+           
+         
+        
+      
+
+            
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div class="tab-pane container active" "id"="home">...</div>
+              <div class="tab-pane container fade" "id"="menu1">...</div>
+              <div class="tab-pane container fade" "id"="menu2">...</div>
+              <div class="tab-pane container fade" "id"="menu2">...</div>
+            </div>
+
+    
+            <% if (typeof errors != "undefined")  { %>
+                <p style="color: red;">Error</p>
+                <ul>
+                    <% for (let i = 0; i < errors.length; i++) { %>
+                        <li style="color: red;">
+                            <%= errors[i].msg %>
+                        </li>
+                        
+                    <% } %>
+                </ul>
+            <% } %>
+            
+
+            <form action="/login" method="POST" class="form-register" >
+            
+                <h2 class="form__titulo">Login</h2>
+                
+                <div class="contenedor-inputs">
+                    
+                    
+                    
+                    <input type="email" name="email" placeholder="Correo" class="input-100" >
+                    
+                    
+                    
+                    <input type="password" name="password" placeholder="Contraseña" class="input-48" >
+                    
+                    <label for="">Recordame</label>
+                    <input type="checkbox" name="recordame">
+                    
+                    
+                    <input type="submit" value="Ingresar" class="btn-enviar">
+                    
+                    
+                    
+                
+            </form>
+    
+    
+            
+    
+            
+        </div>
+      
+        
+        <footer>
+            <%- include('partials/footer'); %>
+        </footer>
+    </div>
+
+  </div> 
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>
 

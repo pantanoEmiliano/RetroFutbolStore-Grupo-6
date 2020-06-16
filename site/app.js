@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require("express-session");
 var logMiddleware = require("./middlewares/logMiddleware");
+var recordameMiddleware = require("./middlewares/recordameMiddleware");
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -25,6 +26,7 @@ app.use(session({
 }));
 
 app.use(logMiddleware);
+app.use(recordameMiddleware);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

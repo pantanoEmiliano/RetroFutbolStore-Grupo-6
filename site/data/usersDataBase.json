@@ -154,5 +154,65 @@
   "password": "$2b$10$ATzZFKvuQnALOWvNxqPzGuwtpvV.FVsccPYLl8IoIxYCA3Zo5Ihna",
   "telefono": "123456",
   "avatar": "1591887831987.png"
+ },
+ {
+  "id": 22,
+  "name": "emiliano",
+  "lastname": "pantano",
+  "username": "emilianopantano",
+  "email": "pantano_47@hotmail.com",
+  "password": "$2b$10$bcxT3tax.EnW/s4eQTPuAO.hjuDDSHA6I8BQiJwT1phVv4axxOD76",
+  "telefono": "123456",
+  "avatar": "1591889311462.png"
+ },
+ {
+  "id": 23,
+  "name": "susana",
+  "lastname": "horia",
+  "username": "susanahoria",
+  "email": "susana@horia.com",
+  "password": "$2b$10$j99DJdKkAe/hmkQplt0GXefX9n5rWkqh/nB/AFCCh2glFeWYK8A9i",
+  "telefono": "123456",
+  "avatar": "1591893442579.jpg"
+ },
+ {
+  "id": 24,
+  "name": "ricardo",
+  "lastname": "iorio",
+  "username": "almafuerte",
+  "email": "nose@mail.com",
+  "password": "$2b$10$4e1UfIvxwnYC9.sZ6s/pXO/hF0numCziXxKbaz3z9tc8gpT0QZDr.",
+  "telefono": "11111",
+  "avatar": "1591893869580.png"
+ },
+ {
+  "id": 25,
+  "name": "alfredo",
+  "lastname": "casero",
+  "username": "alfred",
+  "email": "alfredo@casero.com",
+  "password": "$2b$10$.ubwmc3kStTi5woRQwXbZOAkbgTvyVrQ6epjPHPyT08AL0V8fnsqy",
+  "telefono": "123456",
+  "avatar": "1592178620971.png"
+ },
+ {
+  "id": 26,
+  "name": "susana",
+  "lastname": "horia",
+  "username": "spartano",
+  "email": "emi@emi.com",
+  "password": "$2b$10$v0GMAH0Akc4hEt5gz9matepMLDCNd2xHKDx8eAMOgFaeGW8ZRozRy",
+  "telefono": "123456",
+  "avatar": "1592240550457.png"
+ },
+ {
+  "id": 27,
+  "name": "juan",
+  "lastname": "carlos",
+  "username": "juanca",
+  "email": "juan@carlos.com",
+  "password": "$2b$10$spcCkZTrUSJBe11HuDf11OWiWIiyUPbyu/rXATYQc8eCu10fBIUgO",
+  "telefono": "123456",
+  "avatar": "1592240630528.png"
  }
 ]

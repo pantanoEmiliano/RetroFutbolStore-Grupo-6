@@ -1,80 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito de Compras</title>
-    <link rel='stylesheet' href='/stylesheets/registo.css' />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    
-    <div class="container-fluid">
-        <div class="container">
-            <div class="row" >
-                <div class="col 4"><img src="/images/logo-retro.jpg" alt="" class="rounded-circle" width="50%"> </div>
-                <div class="col-8"><h1 id="titulo"> RetroFutbolStore</h1></div>
-            </div>
-
-    <%- include('partials/nuevomenu.ejs') %>
-
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="/stylesheets/registo.css">
+  <link href="https://fonts.googleapis.com/css?family=Passion+One:700&display=swap" rel="stylesheet">
+  
+  <title>Carrito de Compras</title>
 </head>
 <body>
-    <div class="d-flex p-2 bd-highlight width: 40%">
-       <div class="p-2 bd-highlight">
-           <div class="row no-gutters">
-             <div class="col-md-4">
-              <img src="/images/river-retro.jpg" class="card-img " alt="camiseta">
+  
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row" >
+        <div class="col-4"><img src="/images/logo-retro.jpg" alt="" class="rounded-circle" width="50%"> </div>
+        <div class="col-8"><h1 id="titulo"> RetroFutbolStore</h1></div>
+      </div>
+      
+      <%- include('partials/nuevomenu.ejs') %>
+      
+      
+      <div class="d-flex p-2 bd-highlight width: 40%">
+        <div class="p-2 bd-highlight">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="/images/<%= camiseta.imagen %>" class="card-img " alt="camiseta">
+             
             </div>
             <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">River 2002 </h5>
-              <p class="card-text">Camiseta temporada 2002-2003. 1 título local.</p>
-              <p class="card-text">Talles M, L, XL</p>
-            </div>       
-  
+              <div class="card-body">
+                <h5 class="card-title"style="color: white">River 2002 </h5>
+                <p class="card-text"style="color: white">Camiseta temporada 2002-2003. 1 título local.</p>
+                <p class="card-text"style="color: white">Talles M, L, XL</p>
+              </div>       
+              
+            </div>
+            
           </div>
-
+          
         </div>
-
+        <div class= "flex-grow = 4">
+          
+        </div class= width: 60% >
+        <div class=" container-fluid"  >
+          <div class="card">
+            <h5 class="card-header" widht: 70%>Resumen del pedido</h5>
+            <div class="card-body" width: 70%>
+              <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Costo Total del Producto
+                  <span class="badge badge-primary badge-pill">3200</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Gastos de Envio
+                  <span class="badge badge-primary badge-pill">gratis</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Total
+                  <span class="badge badge-primary badge-pill">3200</span>
+                </li>
+              </ul>
+              <br>
+              <a href="#" class="btn btn-dark">Comprar</a>
+            </div>
+          </div>
+        </div>  
       </div>
-      <div class= "flex-grow = 4">
+      
+      <footer>
+        <%- include('partials/footer'); %>
+    </footer>
+  </div>
 
-    </div class= width: 60% >
-            <div class=" container-fluid"  >
-                <div class="card">
-                    <h5 class="card-header" widht: 70%>Resumen del pedido</h5>
-                    <div class="card-body" width: 70%>
-                        <ul class="list-group">
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                              Costo Total del Producto
-                              <span class="badge badge-primary badge-pill">3200</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                              Gastos de Envio
-                              <span class="badge badge-primary badge-pill">gratis</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                              Total
-                              <span class="badge badge-primary badge-pill">3200</span>
-                            </li>
-                          </ul>
-                        <br>
-                      <a href="#" class="btn btn-dark">Comprar</a>
-                    </div>
-                  </div>
-                </div>  
-              </div>  
-    
-                        
-
-
-
-              <footer>
-                <%- include('partials/footer'); %>
-            </footer>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</div> 
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
 </html>
