@@ -76,7 +76,7 @@ const controller = {
           res.cookie("recordame", ALoguearse.email,{ maxAge: 600000})
         }
 
-      res.render("index");
+      res.render("index", {users: users});
 
     }else {
      return res.render("login", { errors: errors.errors });

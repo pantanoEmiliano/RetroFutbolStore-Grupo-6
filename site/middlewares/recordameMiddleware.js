@@ -3,7 +3,9 @@ const path = require("path");
 function recordameMiddleware(req, res, next){
     next();
     if(req.cookies.recordame != undefined && req.session.usuariologueado == undefined){
-    const usersFilePath = path.join(__dirname, "../data/usersDataBase.json");
+
+      
+      const usersFilePath = path.join(__dirname, "../data/usersDataBase.json");
       const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
       if (users == ""){
         users = [];

@@ -34,4 +34,44 @@ h1{
     margin-top: 35px;
     
 }
+#cartas{
+	width: 750px; position: relative; margin: 50px auto;
+}
 
+.magic {
+	width: 400px; height: 412px;
+	-webkit-perspective: 1000;
+}
+
+.card {
+	width: 265px; height: px;	
+	-webkit-transform-style: preserve-3d;
+	-webkit-transition: 0.5s;
+}
+	.card:hover {
+		-webkit-transform: rotateY(180deg);				
+	}
+
+.face {
+	position: absolute;
+	-webkit-backface-visibility: hidden;
+}
+
+
+.card {
+	float: left; position: absolute; top: 30px; left: 20px;
+	
+}
+	.frente  {
+		width: 265px; height: 370px;
+		-webkit-transform: rotate(5deg);
+	}
+	.espalda {
+		width: 265px; height: 370px;
+		-webkit-transform: rotateY(180deg);
+	}
+	.espalda img{
+		width: 265px; height: 370px;
+		-webkit-transform: rotate(5deg);
+
+	}
