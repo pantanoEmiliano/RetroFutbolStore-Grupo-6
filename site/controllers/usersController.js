@@ -72,11 +72,12 @@ const controller = {
       }
 
       req.session.usuarioLogueado = ALoguearse;
+      
         if(req.body.recordame != undefined){
           res.cookie("recordame", ALoguearse.email,{ maxAge: 600000})
         }
-
-      res.render("index", {users: users});
+      //res.send(ALoguearse.email)
+      res.render("index", { ALoguearse});
 
     }else {
      return res.render("login", { errors: errors.errors });

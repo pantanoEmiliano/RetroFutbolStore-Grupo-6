@@ -13,11 +13,13 @@ const productoController = (req, res) => {
     return camiseta.id < 100
   });
 
+  
   res.render('producto', { 
     title: 'Camisetas',
     nacionales: nacionales,
     internacionales: internacionales,
-    camisetas: camisetas
+    camisetas: camisetas,
+    
   });
 };
 

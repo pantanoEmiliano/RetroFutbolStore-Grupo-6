@@ -14,18 +14,13 @@
         <div class="col-8"><h1 id="titulo"> RetroFutbolStore</h1></div>
       </div>
               <%- include("./partials/nuevomenu") %>
-              
+              <% if(typeof ALoguearse != 'undefined') { %>
+                <%= ALoguearse.email%>
+            <%  } else { %>
+                <h4>Aún no estas logueado. ¿Qué te parece si <a href="/login">lo haces?</a></h4>
+            <% } %>
 
-                <% if (typeof username != "undefined")  { %>
-                  <p style="color: red;">Logueate man</p>
-                  <ul>
-                      <% for (let i = 0; i < users.length; i++) { %>
-                          <li style="color: red;">
-                              <%= users[i].username %>
-                          </li>
-                      <% } %>
-                  </ul>
-              <% } %>
+            
 
   <div class="row">
     <div class="col-1"></div>

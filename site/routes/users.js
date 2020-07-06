@@ -29,3 +29,4 @@ const upload = multer({ storage: storage })
 //router.post('/registro',upload.any(),[check("email").isEmail()], usersController.store); /* Post - Validation login */
 
 module.exports = router;
+

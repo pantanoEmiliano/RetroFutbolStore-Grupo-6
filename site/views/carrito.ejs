@@ -19,20 +19,24 @@
       </div>
       
       <%- include('partials/nuevomenu.ejs') %>
-      
+      <% if(typeof usuarioLogueado != 'undefined') { %>
+        <%= usuarioLogueado.email%>
+    <%  } else { %>
+        <h4>Aún no estas logueado. ¿Qué te parece si <a href="/login">lo haces?</a></h4>
+    <% } %>
       
       <div class="d-flex p-2 bd-highlight width: 40%">
         <div class="p-2 bd-highlight">
           <div class="row no-gutters">
             <div class="col-md-4">
-              <img src="/images/<%= camiseta.imagen %>" class="card-img " alt="camiseta">
+              <img src="/images/<%= camiseta.imagen %>"  width="100%">
              
             </div>
             <div class="col-md-8">
               <div class="card-body">
-                <h5 class="card-title"style="color: white">River 2002 </h5>
-                <p class="card-text"style="color: white">Camiseta temporada 2002-2003. 1 título local.</p>
-                <p class="card-text"style="color: white">Talles M, L, XL</p>
+                <h5 class="card-title"style="color: white">Camiseta: <%= camiseta.equipo %></h5>
+                <p class="card-text"style="color: white">Año: <%= camiseta.año %></p>
+                <p class="card-text"style="color: white">Precio: <%= camiseta.precio %></p>
               </div>       
               
             </div>

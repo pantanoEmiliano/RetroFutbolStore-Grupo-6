@@ -19,7 +19,11 @@
                 </div>
         
                 <%- include("./partials/nuevomenu") %>
-                
+                <% if(typeof usuarioLogueado != 'undefined') { %>
+                    <%= usuarioLogueado.email%>
+                <%  } else { %>
+                    <h4>Aún no estas logueado. ¿Qué te parece si <a href="/login">lo haces?</a></h4>
+                <% } %>
                 <!-- Tab panes -->
                 
                 </div>

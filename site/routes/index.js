@@ -38,6 +38,7 @@ const logDBMiddleware = require("../middlewares/logDBMiddleware");
 const { check, validationResult, body } = require("express-validator");
 const autHMiddleware = require("../middlewares/authMiddleware");
 const guestMiddleware = require("../middlewares/guestMiddleware");
+const recordameMiddleware = require("../middlewares/recordameMiddleware");
 
 /* GET home page. */
 
@@ -46,6 +47,7 @@ router.get("/contacto", contactoController);
 router.get("/registro",guestMiddleware, usersController.root);
 router.get("/producto", productoController);
 router.get("/carrito", carritoController);
+router.get("/carrito/:id", carritoController);
 router.get("/detalle/:id", detalleController); //muestra detalle de producto
 router.get("/create",createController.crearProducto); /* GET - Vista del formulario create */
 router.get("/login", usersController.login); /* GET - Form to create */

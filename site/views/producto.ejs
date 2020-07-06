@@ -20,7 +20,11 @@
             </div>
             
             <%- include('partials/nuevomenu.ejs') %>
-            
+            <% if(typeof ALoguearse != 'undefined') { %>
+                <%= ALoguearse.email%>
+            <%  } else { %>
+                <h4>Aún no estas logueado. ¿Qué te parece si <a href="/login">lo haces?</a></h4>
+            <% } %>
             
             <section>
                 <h2 style="color: crimson;">Nacionales</h2>
