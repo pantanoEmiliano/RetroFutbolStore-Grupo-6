@@ -5,7 +5,7 @@ const multer = require("multer");
 const { check, validationResult, body } = require("express-validator");
 
 const controller = {
-  //crea controlador con sus propiedades
+  //crea controlador con sus propiedades a
 
   root: (req, res, next) => {
     res.render("registro"); //viaja por get a la vista de form de registro
