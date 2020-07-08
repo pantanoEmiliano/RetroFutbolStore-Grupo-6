@@ -42,13 +42,17 @@ const recordameMiddleware = require("../middlewares/recordameMiddleware");
 
 /* GET home page. */
 
-router.get("/", indexController);
+router.get("/", indexController.root);
+
 router.get("/contacto", contactoController);
 router.get("/registro",guestMiddleware, usersController.root);
-router.get("/producto", productoController);
+router.get("/producto",recordameMiddleware, indexController.index);
+router.get('/producto/:pag?', indexController.index);
+router.get('/producto/detalle/:pag?', detalleController.detalle);
 router.get("/carrito", carritoController);
 router.get("/carrito/:id", carritoController);
-router.get("/detalle/:id", detalleController); //muestra detalle de producto
+router.post('/detalle', indexController.busqueda)
+router.get("/detalle/:id", detalleController.detalle); //muestra detalle de producto
 router.get("/create",createController.crearProducto); /* GET - Vista del formulario create */
 router.get("/login", usersController.login); /* GET - Form to create */
 router.get("/users", usersController.root);

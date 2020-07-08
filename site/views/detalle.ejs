@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title></title>
     <link rel='stylesheet' href='/stylesheets/registo.css' />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
@@ -21,26 +21,31 @@
             <h4>Aún no estas logueado. ¿Qué te parece si <a href="/login">lo haces?</a></h4>
         <% } %>
 
-          <section><h2 style="color: crimson;"><%= camiseta.equipo %></h2>
+          <section><h2 style="color: crimson;"><%= mytable.equipo %></h2>
             <div class="row">
               
                 <div class="col-4">
                     <div class="card mb-4 shadow-sm">
-                        <img src="/images/<%= camiseta.imagen %>" width="100%">
+                        <img src="/images/<%= mytable.imagen %>" width="100%">
                     </div>
                 </div>
                 <div class="col-8">
                     <div class="card-body">
-                        <h5 class="card-title"style="color: black">Camiseta: <%= camiseta.equipo %></h5>
-                        <p class="card-text"style="color: black">Año: <%= camiseta.año %></p>
-                        <p class="card-text"style="color: black">Precio: <%= camiseta.precio %></p>
+                        <h5 class="card-title"style="color: black">Camiseta: <%= mytable.equipo %></h5>
+                        <p class="card-text"style="color: black">Año: <%= mytable.año %></p>
+                        <p class="card-text"style="color: black">Seleccion: <%= mytable.seleccion %></p>
+                        <p class="card-text"style="color: black">Precio: <%= mytable.precio %></p>
                         <a href="/producto " button type="button" class="btn btn-light">Volver</button></a><br>
-                        <a href="/carrito/<%= camiseta.imagen %> " button type="button" class="btn btn-light">Agregar a Carrito</button></a>
+                        <a href="/carrito/<%= mytable.imagen %> " button type="button" class="btn btn-light">Agregar a Carrito</button></a>
                     </div>
                 </div>
             </div>  
         </section>
+        
+
           
+          
+
           
           <!-- Tab panes -->
           

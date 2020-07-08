@@ -214,5 +214,15 @@
   "password": "$2b$10$spcCkZTrUSJBe11HuDf11OWiWIiyUPbyu/rXATYQc8eCu10fBIUgO",
   "telefono": "123456",
   "avatar": "1592240630528.png"
+ },
+ {
+  "id": 28,
+  "name": "emiliano",
+  "lastname": "pantano",
+  "username": "asddas",
+  "email": "nonoon@nono.com",
+  "password": "$2b$10$Gnti0ouk/PEW8uqiO4Pcdem/24Ul2EpYyd/6Bo/TtWyGPHgXzscpa",
+  "telefono": "123456",
+  "avatar": "1594233316070.png"
  }
 ]

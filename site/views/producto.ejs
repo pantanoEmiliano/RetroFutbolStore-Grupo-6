@@ -21,23 +21,31 @@
             
             <%- include('partials/nuevomenu.ejs') %>
             <% if(typeof ALoguearse != 'undefined') { %>
-                <%= ALoguearse.email%>
+            <%= ALoguearse%>
             <%  } else { %>
                 <h4>Aún no estas logueado. ¿Qué te parece si <a href="/login">lo haces?</a></h4>
             <% } %>
             
             <section>
-                <h2 style="color: crimson;">Nacionales</h2>
+                <form action="/detalle" method='POST'>
+                    <input type="text" name="search">
+                    <button type="submit">Buscar</button>
+                </form>
+                <h2 style="color: crimson;"><% if(total != undefined) {%>
+                    <% for(var i = 1; i <= total/5+1; i++) {%>
+                        <a href="/producto/<%= i %>"><%= i %></a>
+                    <% } %>
+                    <% } %></h2>
                 <div class="row">
-                    <% for(camiseta of nacionales) { %>
+                    <% for(mytable of mytable) { %>
                         <div class="col-4 ">
                             <div class="card mb-4 shadow-sm ">
-                                <a href="/detalle/<%= camiseta.id %>"><img src="/images/<%= camiseta.imagen %>" width="100%"></a>
+                                <a href="/detalle/<%= mytable.id %>"><img src="/images/<%= mytable.imagen %>" width="100%"></a>
                                 <div class="card-body">
                                     
-                                    <h5 style="text-align: center;" class="card-title" >Camiseta: <%= camiseta.equipo %></h5>
+                                    <h5 style="text-align: center;" class="card-title" >Camiseta: <%= mytable.equipo %></h5>
                                     
-                                    <p style="text-align: center;" class="card-text">Precio: <%= camiseta.precio %></p>
+                                    <p style="text-align: center;" class="card-text">Precio: <%= mytable.precio %></p>
                                 </div>
                             </div>
                         </div>
@@ -45,21 +53,13 @@
                     </div>  
                 </section>  
                 <section>
-                    <h2 style="color: crimson;">Internacionales</h2>
-                    <div class="row">
-                        <% for(camiseta of internacionales) { %>
-                            <div class="col-4">
-                                <div class="card mb-4 shadow-sm">
-                                    <a href="/detalle/<%= camiseta.id %>"><img src="/images/<%=camiseta.imagen %>" width="100%"></a>
-                                    <div class="card-body">
-                                        
-                                        <h5 class="card-title">Camiseta: <%= camiseta.equipo %></h5>
-                                        
-                                        <p class="card-text">Precio: <%= camiseta.precio %></p>
-                                    </div>
-                                </div>
-                            </div>
+                    
+                    <div class="row"><h2 style="color: crimson;">
+                        <% if(total != undefined) {%>
+                            <% for(var i = 1; i <= total/5+1; i++) {%>
+                                <a href="/producto/<%= i %>"><%= i %></a>
                             <% } %>
+                            <% } %></h2>
                         </div>  
                     </section> 
                     <footer>
