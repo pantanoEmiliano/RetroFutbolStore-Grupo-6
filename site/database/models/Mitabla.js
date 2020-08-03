@@ -1,28 +1,28 @@
-module.exports = function(sequelize, dataTipes) {
+module.exports = function(sequelize, dataTypes) {
 
     let alias = "Mitabla";
 
     let cols ={
 
         id:{
-            type: dataTipes.INTEGER,
+            type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncremen: true
         },
         equipo: {
-            type: dataTipes.STRING
+            type: dataTypes.STRING
         },
         precio:{
-            type: dataTipes.DECIMAL
+            type: dataTypes.DECIMAL
         },
         seleccion:{
-            type: dataTipes.TEXT
+            type: dataTypes.TEXT
         },
         imagen:{
-            type: dataTipes.TEXT
+            type: dataTypes.TEXT
         },
         año:{
-            type: dataTipes.INTEGER
+            type: dataTypes.INTEGER
         }
     }
 

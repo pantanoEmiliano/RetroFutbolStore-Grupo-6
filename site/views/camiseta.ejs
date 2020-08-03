@@ -15,16 +15,17 @@
           </div>
   
           <%- include("./partials/nuevomenu") %>
-          <% if(typeof usuarioLogueado != 'undefined') { %>
-            <%= req.cookies.recordame%>
-        <%  } else { %>
-            <h4>Aún no estas logueado. ¿Qué te parece si <a href="/login">lo haces?</a></h4>
-        <% } %>
+          <% if(typeof ALoguearse != 'undefined') { %>
+            <%= ALoguearse.email%>
+            <%  } else { %>
+                <h4>Aún no estas logueado. ¿Qué te parece si <a href="/login">lo haces?</a></h4>
+            <% } %>
         <%for( let i = 0; i < mytable.length; i++) { %>
-            <form action="/detalle/:id" method='POST'>
+            <form action="/detalle" method='POST'>
                 <input type="text" name="search">
-                <button type="submit">Buscar</button>
+                <button type="submit" class="btn btn-light">Buscar</button>
             </form>
+            
           <section><h2 style="color: crimson;"><%= mytable.equipo %></h2>
             <div class="row">
               

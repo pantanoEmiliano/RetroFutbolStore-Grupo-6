@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="/stylesheets/registo.css">
+	<link href="https://fonts.googleapis.com/css?family=Passion+One:700&display=swap" rel="stylesheet">
+	
+	<title>Productos</title>
+</head>
+<body>
+	
+	
+	<div class="container-fluid">
+		<div class="container">
+			<div class="row" >
+				<div class="col 4 "><img src="/images/logo-retro.jpg" alt="" class="rounded-circle" width="50%"> </div>
+				<div class="col-8"><h1 id="titulo"> RetroFutbolStore</h1></div>
+			</div>
+			
+			<%- include('partials/nuevomenu.ejs') %>
+			<% if(typeof ALoguearse != 'undefined') { %>
+				<%= ALoguearse.email%>
+				<%  } else { %>
+					<h4>Aún no estas logueado. ¿Qué te parece si <a href="/login">lo haces?</a></h4>
+					
+          <% } %>
+     
+      <div class="card" style="width: 18rem;">
+        <img src="/images/users/<%= ALoguearse.imagen%>" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">MI Perfil</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Nombre:</h6>
+          <p class="card-text"><%= ALoguearse.nombre%></p>
+          <h6 class="card-subtitle mb-2 text-muted">Apellido:</h6>
+          <p class="card-text"><%= ALoguearse.apellido%></p>
+          <h6 class="card-subtitle mb-2 text-muted">Correo:</h6>
+          <p class="card-text"><%= ALoguearse.email%></p>
+          <a href="perfil/editar" class="btn btn-primary">Editar perfil</a>
+          <a href="/logout" class="btn btn-primary">Logout</a>
+        </div>
+      </div>
+      
+      <footer>
+        <%- include('partials/footer'); %>
+      </footer>
+    </div>
+    
+  </div> 
+  
+  
+  <script src="https://use.fontawesome.com/e52c2df0af.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  
+</body>
+</html>
+

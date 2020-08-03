@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/stylesheets/registo.css">
     <link href="https://fonts.googleapis.com/css?family=Passion+One:700&display=swap" rel="stylesheet">
 
-    <title>Registro</title>
+    <title>Document</title>
 </head>
 <body>
     <div class="container-fluid">
@@ -19,12 +19,16 @@
                 </div>
         
                 <%- include("./partials/nuevomenu") %>
-                
+                <% if(typeof usuarioLogueado != 'undefined') { %>
+                    <%= usuarioLogueado.email%>
+                <%  } else { %>
+                    <h4>Aún no estas logueado. ¿Qué te parece si <a href="/login">lo haces?</a></h4>
+                <% } %>
                 <!-- Tab panes -->
                 
                 </div>
            
-         
+          
         
       
 
@@ -38,39 +42,26 @@
             </div>
     
            
-            <% if (typeof errors != "undefined")  { %>
-                <p style="color: red;">Error</p>
-                <ul>
-                    <% for (let i = 0; i < errors.length; i++) { %>
-                        <li style="color: red;">
-                            <%= errors[i].msg %>
-                        </li>
-                    <% } %>
-                </ul>
-            <% } %>
-
-            <form action="/registro" method="POST" class="form-register" enctype="multipart/form-data">
+            <form action="/create" method="POST" class="form-register" enctype="multipart/form-data">
             
-                <h2 class="form__titulo">REGISTRATE</h2>
+                <h2 class="form__titulo">Crear</h2>
                 
                 <div class="contenedor-inputs">
+                
                     
-                    <input type="text" name="name"  placeholder="Nombre" class="input-48" >
+                    <input type="text" name="equipo" placeholder="Equipo" class="input-48" required>
                     
-                    <input type="text" name="lastname" placeholder="Apellido" class="input-48" >
-                    
-                    <input type="email" name="email" placeholder="Correo" class="input-100" >
-                    
+                    <input type="text" name="seleccion"  placeholder="seleccion" class="input-48" required>
+
                     <input type="file" name="imagen" placeholder="imagen" class="input-48" required>
+
+                    <input type="text" name="año" placeholder="Año" class="input-100" required>
                     
-                    <input type="password" name="password" placeholder="Contraseña" class="input-48" >
+                    <input type="text" name="precio" placeholder="Precio" class="input-48" required>
+
+                    <input type="submit" value="Crear" class="btn-enviar">
                     
                     
-                   
-                    <input type="submit" value="Registrate" class="btn-enviar">
-                    
-                    
-                    <p  class="form_link" style="color: black;" >¿Ya tienes una cuenta?<a href="/login"style="color: black;"> Ingresa Aqui</a></p>
                 
             </form>
     
@@ -80,15 +71,13 @@
             
         </div>
       
+        
         <footer>
             <%- include('partials/footer'); %>
         </footer>
     </div>
 
   </div> 
-  
-
-
 
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

@@ -7,7 +7,9 @@ const recordameMiddleware = require("../middlewares/recordameMiddleware");
 const db = require("../database/models");
 const indexController ={
     root: function(req,res,next){
-      res.render("index")
+      res.render("index",{
+        ALoguearse : req.session.usuarioLogueado,
+      })
     },
     index:
     async function(req, res) {
@@ -26,7 +28,8 @@ const indexController ={
             offset: pagina
         });
         
-        res.render('producto',  {ALoguearse :req.session.usuarioLogueado.email,
+        res.render('producto',  {
+            ALoguearse : req.session.usuarioLogueado,
             mytable: mytable,
             total: total
         });
@@ -41,6 +44,7 @@ const indexController ={
        });
     
        res.render('camiseta' ,{
+          ALoguearse : req.session.usuarioLogueado,
           mytable: camisetaBuscadas,
           total: undefined
       });

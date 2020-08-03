@@ -8,7 +8,10 @@ const detalleController =  {
         
     })
     .then(function(mytable) {
-        res.render('detalle', {mytable: mytable});
+        res.render('detalle', {
+          ALoguearse : req.session.usuarioLogueado,
+          mytable: mytable
+        });
     });
  },
 };
