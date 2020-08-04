@@ -76,9 +76,8 @@ input{
 }
 
 .container-fluid{
-    background: rgb(12, 12, 12) fixed no-repeat 50% 50%;
+    background: white fixed no-repeat 50% 50%;
     background-size: cover;
-    background-image: url(/images/3.jpg);
    
 }
 
