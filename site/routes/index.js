@@ -31,8 +31,8 @@ const indexController = require("../controllers/indexController");
 const contactoController = require("../controllers/contactoController");
 const registroController = require("../controllers/registroController");
 const productoController = require("../controllers/productoController");
-const carritoController = require("../controllers/carritoController");
-const detalleController = require("../controllers/detalleController.js");
+//const carritoController = require("../controllers/carritoController");
+//const detalleController = require("../controllers/detalleController.js");
 const usersController = require("../controllers/usersController.js");
 const createController = require("../controllers/createController");
 const logDBMiddleware = require("../middlewares/logDBMiddleware");
@@ -50,7 +50,8 @@ router.get("/registro",guestMiddleware, usersController.root);
 router.get("/producto",recordameMiddleware, indexController.index);
 router.get('/producto/:pag?', indexController.index);
 router.get('/producto/detalle/:pag?', detalleController.detalle);
-router.get("/carrito", carritoController);
+//  obtenerId: function(req,res) {
+router.get("/detalle", detalleController.obtenerId);
 router.get("/carrito/:id", carritoController);
 router.post('/detalle', indexController.busqueda)
 router.get("/detalle/:id", detalleController.detalle); //muestra detalle de producto

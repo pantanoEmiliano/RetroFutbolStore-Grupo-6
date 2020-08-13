@@ -1,6 +1,4 @@
-
-const carritoController = function(req, res, next) {
-    res.render('carrito', { title: 'Carrito de Compras' });
-};
-
-module.exports = carritoController;
+const fs = require("fs");
+const path = require("path");
+let db = require("../database/models");
+const detalle = require ('detalleController');

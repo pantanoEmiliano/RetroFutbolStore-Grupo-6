@@ -95,3 +95,13 @@ input{
   
 }
     
+#fondo{
+    background-image: url("../images/vint1.jpg");
+    background-size: cover;
+    
+    } 
+
+    .carousel-inner {
+        max-height: 20rem;
+    }
+    
