@@ -12,7 +12,7 @@ const storage = multer.diskStorage({
   filename: (req, file, cb) => {
     cb(null, Date.now() + path.extname(file.originalname));
   },
-});
+});n
 
 const upload = multer({ storage: storage });
 
@@ -31,7 +31,7 @@ const indexController = require("../controllers/indexController");
 const contactoController = require("../controllers/contactoController");
 const registroController = require("../controllers/registroController");
 const productoController = require("../controllers/productoController");
-//const carritoController = require("../controllers/carritoController");
+const carritoController = require("../controllers/carritoController");
 const detalleController = require("../controllers/detalleController.js");
 const usersController = require("../controllers/usersController.js");
 const createController = require("../controllers/createController");
@@ -45,15 +45,15 @@ const recordameMiddleware = require("../middlewares/recordameMiddleware");
 
 router.get("/",recordameMiddleware, indexController.root);
 
-router.get("/contacto", contactoController); 
-router.get("/registro",guestMiddleware, usersController.root); 
-router.get("/producto",recordameMiddleware, indexController.index); 
+router.get("/contacto", contactoController);
+router.get("/registro",guestMiddleware, usersController.root);
+router.get("/producto",recordameMiddleware, indexController.index);
 router.get('/producto/:pag?', indexController.index);
 router.get('/producto/detalle/:pag?', detalleController.detalle);
-//router.get("/carrito", carritoController);
-//router.get("/carrito/:id", carritoController);
-router.post('/detalle', indexController.busqueda) 
-router.get("/detalle/:id", detalleController.detalle); //muestra
+router.get("/carrito", carritoController);
+router.get("/carrito/:id", carritoController);
+router.post('/detalle', indexController.busqueda)
+router.get("/detalle/:id", detalleController.detalle); //muestra detalle de producto
 router.get("/create",createController.crearProducto); /* GET - Vista del formulario create */
 router.get("/login", usersController.login); /* GET - Form to create */
 router.get('/logout', usersController.logout);
@@ -93,14 +93,12 @@ router.post('/registro',uupload.any(),[
       } else{
          const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
       }
-
       for(let i = 0; i< users.length; i++){
         if (users[i].email == value){
           return false;
         }
       }
       return true;
-
     }).withMessage("Usuario existente"),
     
   ],usersController.store); //Viaja pòr POST crea nuevo usuario

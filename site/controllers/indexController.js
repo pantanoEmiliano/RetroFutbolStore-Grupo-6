@@ -1,4 +1,4 @@
-/*const indexController = function (req, res, next) {
+z/*const indexController = function (req, res, next) {
   res.render("index", { title: "RetroFutbolStore" });
 };*/
 const recordameMiddleware = require("../middlewares/recordameMiddleware");

@@ -1,3 +1,8 @@
+ <div>
+              <button id="bprimary" value="Añadir a Carrito" quantity="1" image="<%= producto.image %>" precio="<%= producto.dn_precio %>" nombre="<%= producto.ds_nombre %>" product_id="<%= producto.id %>" name="anadir" onclick="micarrito(this)">Añadir a Carrito</button>
+          </div>  
+
+
 
 function micarrito(producto) {
    let id = producto.getAttribute('product_id');

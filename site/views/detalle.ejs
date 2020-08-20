@@ -14,7 +14,8 @@
               <div class="col-8"><h1 id="titulo"> RetroFutbolStore</h1></div>
           </div>
   
-          <%- include("./partials/nuevomenu") %>
+          <%- include("./partials/header") %>
+
           <% if(typeof ALoguearse != 'undefined') { %>
             <%= ALoguearse.email%>
             <%  } else { %>
@@ -36,8 +37,8 @@
                         <p class="card-text"style="color: black">Seleccion: <%= mytable.seleccion %></p>
                         <p class="card-text"style="color: black">Precio: <%= mytable.precio %></p>
                         <a href="/producto " button type="button" class="btn btn-light">Volver</button></a><br>
-                        <a href="/carrito/<%= mytable.id %> " button type="button" class="btn btn-light">Agregar a Carrito</button></a>
-                    </div>
+                        <button onclick="changeColor('red');">Agregar al carrito</button>
+                      </div>
                 </div>
             </div>  
         </section>
@@ -65,6 +66,8 @@
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-       
+        <script src="../public/script/detalle.js"></script>
+
+
   </body>
 </html>

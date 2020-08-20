@@ -6,79 +6,48 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="/stylesheets/registo.css">
   <link href="https://fonts.googleapis.com/css?family=Passion+One:700&display=swap" rel="stylesheet">
-  <script src="carrito.js"></script>
+  
   <title>Carrito de Compras</title>
 </head>
 <body>
-  
-  <div class="container-fluid">
-    <div class="container">
-      <div class="row" >
-        <div class="col-4"><img src="/images/logo-retro.jpg" alt="" class="rounded-circle" width="50%"> </div>
-        <div class="col-8"><h1 id="titulo"> RetroFutbolStore</h1></div>
-      </div>
-      
-      <%- include('partials/nuevomenu.ejs') %>
-      <% if(typeof usuarioLogueado != 'undefined') { %>
+  <%- include("./partials/header") %>
+
+      <% if(typeof usuarioLogueado != 'undefined') { %>
         <%= usuarioLogueado.email%>
-    <%  } else { %>
+    <%  } else { %>
         <h4>Aún no estas logueado. ¿Qué te parece si <a href="/login">lo haces?</a></h4>
-    <% } %>
+    <% } %>
       
-      <div class="d-flex p-2 bd-highlight width: 40%">
-        <div class="p-2 bd-highlight">
-          <div class="row no-gutters">
-            <div class="col-md-4">
-              <img src="/images/"  width="100%">
-             
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title"style="color: white">Camiseta: <%=  %></h5>
-                <p class="card-text"style="color: white">Año: <%=  %></p>
-                <p class="card-text"style="color: white">Precio: <%=  %></p>
-              </div>       
-              
-            </div>
-            
-          </div>
-          
+    <div class="col-md-12" display:flex >
+      <div class="card" style="width: 18rem;" flex-wrap: wrap>
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
         </div>
-        <div class= "flex-grow = 4">
-          
-        </div class= width: 60% >
-        <div class=" container-fluid"  >
-          <div class="card">
-            <h5 class="card-header" widht: 70%>Resumen del pedido</h5>
-            <div class="card-body" width: 70%>
-              <ul class="list-group">
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                  Costo Total del Producto
-                  <span class="badge badge-primary badge-pill">
-                    
-                  </span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                  Gastos de Envio
-                  <span class="badge badge-primary badge-pill">gratis</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                  Total
-                  <span class="badge badge-primary badge-pill">3200</span>
-                </li>
-              </ul>
-              <br>
-              <a href="#" class="btn btn-dark">Comprar</a>
-            </div>
-          </div>
-        </div>  
       </div>
+    </div> 
       
+        </div class="col-md-4" flex-wrap: wrap>
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Cras justo odio
+              <span class="badge badge-primary badge-pill">14</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Dapibus ac facilisis in
+              <span class="badge badge-primary badge-pill">2</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Morbi leo risus
+              <span class="badge badge-primary badge-pill">1</span>
+            </li>
+          </ul>
+      
+        </div>
       <footer>
         <%- include('partials/footer'); %>
     </footer>
   </div>
-
 </div> 
   
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
