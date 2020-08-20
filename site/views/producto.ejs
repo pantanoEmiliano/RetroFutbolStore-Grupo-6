@@ -4,22 +4,19 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<link rel="stylesheet" href="/stylesheets/registo.css">
+	<link rel="stylesheet" href="/stylesheets/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Passion+One:700&display=swap" rel="stylesheet">
 	
 	<title>Productos</title>
 </head>
 <body>
 	
+	<%- include("./partials/nuevomenu") %>
 	
-	<div class="container-fluid">
-		<div class="container">
-			<div class="row" >
-				<div class="col 4 "><img src="/images/logo-retro.jpg" alt="" class="rounded-circle" width="50%"> </div>
-				<div class="col-8"><h1 id="titulo"> RetroFutbolStore</h1></div>
-			</div>
-			
-			<%- include('partials/nuevomenu.ejs') %>
+		
+				
+				<div class="container-fluid">
+					
 			<% if(typeof ALoguearse != 'undefined') { %>
 				<%= ALoguearse.email%>
 				<%  } else { %>
@@ -27,10 +24,7 @@
 					<% } %>
 					
 					<section>
-						<form action="/detalle" method='POST'>
-							<input type="text" placeholder="Buscar Camiseta" name="search">
-							<button  type="submit" class="btn btn-light">Buscar</button>
-						</form>
+						
 						
 						
 						<h2 style="color: crimson;"><% if(total != undefined) {%>
@@ -40,8 +34,8 @@
 								<% } %></h2>
 								<div class="row">
 									<% for(mytable of mytable) { %>
-										<div class="col-4 ">
-											<div class="card mb-4 shadow-sm ">
+										<div class="col-sm-6 col-md-4 ">
+											<div class="card m-2 p-4 shadow ">
 												<a href="/detalle/<%= mytable.id %>"><img src="/images/<%= mytable.imagen %>" width="100%"></a>
 												<div class="card-body">
 													
@@ -53,6 +47,8 @@
 										</div>
 										<% } %>
 									</div>  
+									
+									
 								</section>  
 								<section>
 									

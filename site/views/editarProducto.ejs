@@ -18,7 +18,8 @@
                     <div class="col-8"><h1 id="titulo"> RetroFutbolStore</h1></div>
                 </div>
         
-                <%- include("./partials/nuevomenu") %>
+                <%- include("./partials/menu") %>
+
                 <% if(typeof usuarioLogueado != 'undefined') { %>
                     <%= usuarioLogueado.email%>
                 <%  } else { %>

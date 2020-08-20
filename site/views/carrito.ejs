@@ -4,73 +4,130 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" href="/stylesheets/registo.css">
+  <link rel="stylesheet" href="/stylesheets/style.css">
   <link href="https://fonts.googleapis.com/css?family=Passion+One:700&display=swap" rel="stylesheet">
   
   <title>Carrito de Compras</title>
+  <script src="../js/elcarrito.js"></script>
 </head>
 <body>
   
   <div class="container-fluid">
-    <div class="container">
-      <div class="row" >
-        <div class="col-4"><img src="/images/logo-retro.jpg" alt="" class="rounded-circle" width="50%"> </div>
-        <div class="col-8"><h1 id="titulo"> RetroFutbolStore</h1></div>
+    
+        <%- include("./partials/nuevomenu") %>
       </div>
-      
-      <%- include('partials/nuevomenu.ejs') %>
+
       <% if(typeof usuarioLogueado != 'undefined') { %>
         <%= usuarioLogueado.email%>
     <%  } else { %>
         <h4>Aún no estas logueado. ¿Qué te parece si <a href="/login">lo haces?</a></h4>
     <% } %>
       
-      <div class="d-flex p-2 bd-highlight width: 40%">
-        <div class="p-2 bd-highlight">
-          <div class="row no-gutters">
-            <div class="col-md-4">
-              <img src="/images/"  width="100%">
-             
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title"style="color: white">Camiseta: <%=  %></h5>
-                <p class="card-text"style="color: white">Año: <%=  %></p>
-                <p class="card-text"style="color: white">Precio: <%=  %></p>
-              </div>       
-              
-            </div>
-            
-          </div>
-          
-        </div>
-        <div class= "flex-grow = 4">
-          
-        </div class= width: 60% >
-        <div class=" container-fluid"  >
-          <div class="card">
-            <h5 class="card-header" widht: 70%>Resumen del pedido</h5>
-            <div class="card-body" width: 70%>
-              <ul class="list-group">
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                  Costo Total del Producto
-                  <span class="badge badge-primary badge-pill">3200</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                  Gastos de Envio
-                  <span class="badge badge-primary badge-pill">gratis</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                  Total
-                  <span class="badge badge-primary badge-pill">3200</span>
-                </li>
-              </ul>
-              <br>
-              <a href="#" class="btn btn-dark">Comprar</a>
-            </div>
-          </div>
-        </div>  
-      </div>
+      
+    
+   
+   
+       <main>
+           <div class="container">
+               <div class="row mt-3">
+                   <div class="col">
+                       <h2 class="d-flex justify-content-center mb-3">Realizar Compra</h2>
+   
+                   <form id="procesar-pago" action="/carrito/comprar" method="POST">
+                           <div class="form-group row">
+                               <label for="cliente" class="col-12 col-md-2 col-form-label h2">Cliente :</label>
+                               <div class="col-12 col-md-10">
+                                   <input type="text" class="form-control" id="cliente"
+                                       placeholder="Ingresa nombre cliente" name="destinatario">
+                               </div>
+                           </div>
+                           <div class="form-group row">
+                               <label for="email" class="col-12 col-md-2 col-form-label h2">Correo :</label>
+                               <div class="col-12 col-md-10">
+                                   <input type="text" class="form-control" id="correo" placeholder="Ingresa tu correo" name="cc_to">
+                               </div>
+                           </div>
+   
+                             <div class="form-group row">
+                               <label for="tarjeta" class="col-12 col-md-2 col-form-label h2">Tarjeta :</label>
+                               <div class="col-12 col-md-10">
+                                   <input type="text" class="form-control" id="tarjeta" placeholder="Ingresa tu tarjeta" name="tarjeta">
+                               </div>
+                           </div>
+   
+                           <div id="carrito" class="form-group table-responsive" >
+                               <table class="table" id="lista-compra" >
+                                   <thead>
+                                       <tr>
+                                           <th scope="col">Imagen</th>
+                                           <th for="datas" scope="col">Nombre</th>
+                                           <input type="hidden" id="datas" name="datas">
+                                           <th scope="col">Precio</th>
+                                           <th scope="col">Cantidad</th>
+                                           <th scope="col">Sub Total</th>
+                                           <th scope="col">Eliminar</th>
+                                       </tr>
+   
+                                   </thead>
+                                   <tbody >
+   
+                                   </tbody>
+                                   <tr>
+                                       <th colspan="4" scope="col" class="text-right">SUB TOTAL :</th>
+                                       <th scope="col">
+                                           <p id="subtotal"></p>
+                                       </th>
+                                       <!-- <th scope="col"></th> -->
+                                   </tr>
+                                   <tr>
+                                       <th colspan="4" scope="col" class="text-right">IVA :</th>
+                                       <th scope="col">
+                                           <p id="iva"></p>
+                                       </th>
+                                       <!-- <th scope="col"></th> -->
+                                   </tr>
+                                   <tr>
+                                       <th colspan="4" scope="col" class="text-right">TOTAL :</th>
+                                       <th scope="col">
+                                           <input id="total" name="monto" class="font-weight-bold border-0" readonly style="background-color: white;"></input>
+                                       </th>
+                                       <!-- <th scope="col"></th> -->
+                                   </tr>
+   
+                               </table>
+                           </div>
+   
+   
+                           <div class="row justify-content-between">
+                               <div class="col-md-4 mb-2">
+                                   <a href="/Home" class="btn btn-info btn-block">Seguir comprando</a>
+                               </div>
+                               <div class="col-md-4 mb-2">
+                                   <a href="#" class="btn btn-danger btn-block" id="vaciar-carrito">Vaciar Carrito</a>
+                               </div>
+                               <div class="col-md-4 mb-2">
+                                   <button class="btn btn-success btn-block" id="procesar-compra">Realizar compra</button>
+                               </div>
+                           </div>
+                       </form>
+   
+   
+                   </div>
+   
+   
+               </div>
+   
+           </div>
+       </main>
+   
+   
+   
+   
+   
+       </div>   
+           
+   
+   
       
       <footer>
         <%- include('partials/footer'); %>
@@ -78,7 +135,160 @@
   </div>
 
 </div> 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+           <script src="/javascripts/comprarFunction.js"></script>
+<script type="text/javascript"> 
+
+        
+
+  window.onload = function () {
+
+
+      let bbdd = JSON.parse(sessionStorage.getItem('session'));
+
+      let $items = document.querySelector('#items');
+      let carrito = [];
+      let total = 0;
+      let $carrito = document.querySelector('#carrito');
+      let $total = document.querySelector('#total');
+      let $botonVaciar = document.querySelector('#boton-vaciar');
+
+      // Funciones
+      function renderItems() {     
+           
+          for (var info of bbdd) {
+              //console.log(info);
+              // Estructura
+              let miNodo = document.createElement('div');
+              miNodo.classList.add('card', 'col-sm-4');
+              // Body
+              let miNodoCardBody = document.createElement('div');
+              miNodoCardBody.classList.add('card-body');
+              // Titulo
+              let miNodoTitle = document.createElement('h5');
+              miNodoTitle.classList.add('card-title');
+              miNodoTitle.textContent = info['nombre'];
+              // Imagen
+              let miNodoImagen = document.createElement('img');
+              miNodoImagen.classList.add('img-fluid');
+              miNodoImagen.setAttribute('src', info['imagen']);
+              // Precio
+              let miNodoPrecio = document.createElement('p');
+              miNodoPrecio.classList.add('card-text');
+              miNodoPrecio.textContent = '$' + info['precio'];
+              // Boton 
+              let miNodoBoton = document.createElement('button');
+              miNodoBoton.classList.add('btn', 'btn-primary');
+              miNodoBoton.textContent = '+';
+              miNodoBoton.setAttribute('marcador', info['id']);
+              miNodoBoton.addEventListener('click', anyadirCarrito);
+              // Insertamos
+              miNodoCardBody.appendChild(miNodoImagen);
+              miNodoCardBody.appendChild(miNodoTitle);
+              miNodoCardBody.appendChild(miNodoPrecio);
+              miNodoCardBody.appendChild(miNodoBoton);
+              miNodo.appendChild(miNodoCardBody);
+              $items.appendChild(miNodo);
+          }
+      }
+
+      function anyadirCarrito () {
+          // Anyadimos el Nodo a nuestro carrito
+          carrito.push(this.getAttribute('marcador'))
+          // Calculo el total
+          calcularTotal();
+          // Renderizamos el carrito 
+          renderizarCarrito();
+      }
+
+      function renderizarCarrito() {
+          // Vaciamos todo el html
+          $carrito.textContent = '';
+          // Quitamos los duplicados
+          let carritoSinDuplicados = [...new Set(carrito)];
+          // Generamos los Nodos a partir de carrito
+          carritoSinDuplicados.forEach(function (item, indice) {
+              // Obtenemos el item que necesitamos de la variable base de datos
+              let miItem = bbdd.filter(function(itemBaseDatos) {
+                  return itemBaseDatos['id'] == item;
+              });
+              // Cuenta el número de veces que se repite el producto
+              let numeroUnidadesItem = carrito.reduce(function (total, itemId) {
+                  return itemId === item ? total += 1 : total;
+              }, 0);
+              // Creamos el nodo del item del carrito
+              let miNodo = document.createElement('li');
+              miNodo.classList.add('list-group-item', 'text-right', 'mx-2');
+              miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0]['nombre']} - $  ${miItem[0]['precio']}`;
+              // Boton de borrar
+              let miBoton = document.createElement('button');
+              miBoton.classList.add('btn', 'btn-danger', 'mx-5');
+              miBoton.textContent = 'X';
+              miBoton.style.marginLeft = '1rem';
+              miBoton.setAttribute('item', item);
+              miBoton.addEventListener('click', borrarItemCarrito);
+              // Mezclamos nodos
+              miNodo.appendChild(miBoton);
+              $carrito.appendChild(miNodo);
+          })
+      }
+
+      function borrarItemCarrito() {
+        
+          // Obtenemos el producto ID que hay en el boton pulsado
+          let id = this.getAttribute('item');
+          // Borramos todos los productos
+          carrito = carrito.filter(function (carritoId) {
+              return carritoId !== id;
+          });
+          // volvemos a renderizar
+          renderizarCarrito();
+          // Calculamos de nuevo el precio
+          calcularTotal();
+      }
+
+      function calcularTotal() {
+          // Limpiamos precio anterior
+          total = 0;
+          // Recorremos el array del carrito
+          for (let item of carrito) { 
+              // De cada elemento obtenemos su precio
+              let miItem = bbdd.filter((individuo) => {
+                  return individuo['id'] == item;
+              });
+              
+              total = total + Number(miItem[0]['precio']);  
+          }
+          
+          // Formateamos el total para que solo tenga dos decimales
+          // let totalDosDecimales = total.toFixed(2);
+          // Renderizamos el precio en el HTML
+          $total.textContent = total;
+      }
+
+
+      function vaciarCarrito() {
+          // Limpiamos los productos guardados
+          carrito = [];
+          // Renderizamos los cambios
+          renderizarCarrito();
+          calcularTotal();
+      }
+
+      // Eventos
+      $botonVaciar.addEventListener('click', vaciarCarrito);
+
+      // Inicio
+      renderItems();
+  } 
+
   
+
+
+</script>
+
+<script src="../js/detalle.js"></script>
+  <script src="../js/carrito.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
