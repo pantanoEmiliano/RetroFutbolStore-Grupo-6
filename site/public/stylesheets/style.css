@@ -1,84 +1,43 @@
-.carousel-item{
-  height: 100vh;
-  min-height: 300px;
-  background: no-repeat center center scroll;
-  -webkit-background-size: cover;
+.container-fluid{
+  background: rgb(12, 12, 12) fixed no-repeat 50% 50%;
   background-size: cover;
-}
-.carousel-caption{
- top: 250px;
-}
-.carousel-caption h5{
-  font-size: 45px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-top: 25px;
-  font-family: merienda;
-}
-.carousel-caption p{
-  width: 60%;
-  margin: auto;
-  font-size: 18px;
-  line-height: 1.9;
-  font-family: poppins;
-}
-.carousel-caption a{
-  text-transform: uppercase;
-  background: #262626;
-  padding: 10px;
-  display: inline-block;
-  color: #fff;
-  margin-top: 15px;
+  
+ 
 }
 
-.navbar-nav a{
-  font-family: poppins;
-  font-size: 18px;
-  text-transform: uppercase;
-  font-weight: bold;
+
+.navbar{
+  
+  margin: 3vh;
+  margin-bottom: 8vh;
+  
 }
 
-.navbar-light .navbar-brand{
-  color: #fff;
-  font-size: 25px;
-  text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 2px;
+footer{
+  margin: 5vh;
+}
+h1{
+  
+  color: white;
+  font-size: 70px;
+  margin-top: 35px;
+  
+}
+#titulo{
+  
+  color: white;
+  font-size: 70px;
+  margin-top: 35px;
+  
+}
+div{
+  margin:30px;
+  
+}
+.card-text{
+  color: black;
+}
+.card-title{
+  color: black;
 }
 
-.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link{
-  color: #fff;
-}
-.navbar-light .navbar-nav .nav-link{
-  color: #fff;
-}
-.navbar-nav{
-  text-align: center;
-}
-.nav-link{
-  padding: 2rem 1rem;
-}
-.w-100{
-  width: 100vh;
-}
-
-.main-section{
-  margin: 0 auto;
-  margin-top: 25%;
-  padding: 0;
-}
-
-.user-img{
-  margin-top: -50px;
-  margin-bottom: 35px;
-}
-
-.modal-content{
-  background-color: #3b4652;
-  opacity: .95;
-  padding: 0 20px;
-}
-.user-img img{
-  width: 100px;
-  height: 100px;
-}

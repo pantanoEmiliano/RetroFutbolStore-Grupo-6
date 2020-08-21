@@ -11,13 +11,14 @@
 </head>
 <body>
     <div class="container-fluid">
-        <div class="container">
-          <div class="row" id="header" >
-            <div class="col 4"><img src="/images/logo-retro.jpg" alt="" class="rounded-circle" width="50%"> </div>
-            <div class="col-8"><h1 id="titulo"> RetroFutbolStore</h1></div>
-            <%- include("./partials/menu") %>
-          </div>
-
+      
+            <div class="container">
+                <div class="row" >
+                    <div class="col 4"><img src="/images/logo-retro.jpg" alt="" class="rounded-circle" width="50%"> </div>
+                    <div class="col-8"><h1 id="titulo"> RetroFutbolStore</h1></div>
+                </div>
+        
+                <%- include("./partials/nuevomenu") %>
                 <% if(typeof usuarioLogueado != 'undefined') { %>
                     <%= usuarioLogueado.email%>
                 <%  } else { %>

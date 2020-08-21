@@ -1,12 +1,13 @@
-
+*{
+    box-sizing: border-box;
+}
 
 h1{
     
     color: white;
     font-size: 70px;
     margin-top: 35px;
-    font-family: 'Passion One', cursive;
-
+    
 }
 
 .form-register{
@@ -75,88 +76,36 @@ input{
 }
 
 .container-fluid{
-    
-    
+    background: white fixed no-repeat 50% 50%;
+    background-size: cover;
    
 }
 
-
+.navbar{
+    margin: 3vh;
+    margin-bottom: 8vh;
+    
+}
 
 #titulo{
   
- color: black;
+  color: white;
   font-size: 70px;
   margin-top: 35px;
   
 }
-
-#header{
-  
     
-        border-top: 1px solid #e1e1e1;
-        border-bottom: 1px solid #5E5E5A;
-    
-}
-.carousel-item{
-    height: 100vh;
-    min-height: 300px;
-    background: no-repeat center center scroll;
-    -webkit-background-size: cover;
+#fondo{
+    background-image: url("../images/vint1.jpg");
     background-size: cover;
-  }
-  .carousel-caption{
-   top: 250px;
-  }
-  .carousel-caption h5{
-    font-size: 45px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-top: 25px;
-    font-family: merienda;
-  }
-  .carousel-caption p{
-    width: 60%;
-    margin: auto;
-    font-size: 18px;
-    line-height: 1.9;
-    font-family: poppins;
-  }
-  .carousel-caption a{
-    text-transform: uppercase;
-    background: #262626;
-    padding: 10px;
-    display: inline-block;
-    color: #fff;
-    margin-top: 15px;
-  }
+    
+    } 
+
+    .carousel-inner {
+        max-height: 20rem;
+    }
+    
+#section{
+    text-align: right;
   
-  .navbar-nav a{
-    font-family: poppins;
-    font-size: 18px;
-    text-transform: uppercase;
-    font-weight: bold;
-  }
-  
-  .navbar-light .navbar-brand{
-    color: black;
-    font-size: 25px;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 2px;
-  }
-  
-  .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link{
-    color: black;
-  }
-  .navbar-light .navbar-nav .nav-link{
-    color: black;
-  }
-  .navbar-nav{
-    text-align: center;
-  }
-  .nav-link{
-    padding: 2rem 1rem;
-  }
-  .w-100{
-    width: 100vh;
-  }
+}

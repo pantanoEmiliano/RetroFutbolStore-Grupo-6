@@ -7,13 +7,14 @@
 
   </head>
   <body>
-    <<div class="container-fluid">
+    <div class="container-fluid">
       <div class="container">
-        <div class="row" id="header" >
-          <div class="col 4"><img src="/images/logo-retro.jpg" alt="" class="rounded-circle" width="50%"> </div>
-          <div class="col-8"><h1 id="titulo"> RetroFutbolStore</h1></div>
-          <%- include("./partials/menu") %>
-        </div>
+          <div class="row" >
+              <div class="col 4"><img src="/images/logo-retro.jpg" alt="" class="rounded-circle" width="50%"> </div>
+              <div class="col-8"><h1 id="titulo"> RetroFutbolStore</h1></div>
+          </div>
+  
+          <%- include("./partials/header") %>
 
           <% if(typeof ALoguearse != 'undefined') { %>
             <%= ALoguearse.email%>
@@ -24,24 +25,21 @@
           <section><h2 style="color: crimson;"><%= mytable.equipo %></h2>
             <div class="row">
               
-                
-            <div class="card col-lg-12 sm-6 m-2 p-4 shadow " style="max-width: auto;" id="lista-productos">
-              <div class="row no-gutters">
-                <div class="col-md-4 sm-2">
-                  <img src="/images/<%= mytable.imagen %>" class="card-img"  alt="...">
+                <div class="col-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="/images/<%= mytable.imagen %>" width="100%">
+                    </div>
                 </div>
-                <div class="col-md-8 sm-4">
-                  <div class="card-body">
-                    <h5 class="card-title">Camiseta: <%= mytable.equipo %></h5>
-                    <p class="card-text">Descripcion: Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, fuga!</p>
-                    <p class="card-text">Precio: <%= mytable.precio %></p>
-                    <p class="card-text"><small class="text-muted">Año: <%= mytable.año %> Seleccion: <%= mytable.seleccion %> </small></p>
-                    <a href="/producto" class="btn btn-primary">Volver</a>
-                    <button id="bprimary agregar-carrito" value="Añadir a Carrito" quantity=1 image="<%= mytable.imagen %>" precio="<%= mytable.precio %>" nombre="<%= mytable.equipo %>" product_id="<%= mytable.id %>" name="anadir" onclick="micarrito(this)">Añadir a Carrito</button>
-                  </div>
+                <div class="col-8">
+                    <div class="card-body">
+                        <h5 class="card-title"style="color: black">Camiseta: <%= mytable.equipo %></h5>
+                        <p class="card-text"style="color: black">Año: <%= mytable.año %></p>
+                        <p class="card-text"style="color: black">Seleccion: <%= mytable.seleccion %></p>
+                        <p class="card-text"style="color: black">Precio: <%= mytable.precio %></p>
+                        <a href="/producto " button type="button" class="btn btn-light">Volver</button></a><button id="bprimary agregar-carrito" value="Añadir a Carrito" quantity=1 image="<%= mytable.imagen %>" precio="<%= mytable.precio %>" nombre="<%= mytable.equipo %>" product_id="<%= mytable.id %>" name="anadir" onclick="micarrito(this)">Añadir a Carrito</button>
+                      </div>
                 </div>
-              </div>
-            </div>
+            </div>  
         </section>
         
 
@@ -61,12 +59,15 @@
     
 
 
+
   <script src="../js/carrito.js"></script>
-<script src="../js/detalle.js"></script>
+  <script src="../js/detalle.js"></script>
     <script src="https://use.fontawesome.com/e52c2df0af.js"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-       
+        <script src="../public/script/detalle.js"></script>
+
+
   </body>
 </html>

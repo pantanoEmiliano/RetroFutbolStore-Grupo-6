@@ -1,6 +1,6 @@
 
 const carritoController = function(req, res, next) {
-    res.render('carrito', { title: 'Carrito de Compras' });
+res.render ('carrito')
 };
 
 module.exports = carritoController;

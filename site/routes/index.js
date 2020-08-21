@@ -12,7 +12,7 @@ const storage = multer.diskStorage({
   filename: (req, file, cb) => {
     cb(null, Date.now() + path.extname(file.originalname));
   },
-});
+})
 
 const upload = multer({ storage: storage });
 
@@ -93,14 +93,12 @@ router.post('/registro',uupload.any(),[
       } else{
          const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
       }
-
       for(let i = 0; i< users.length; i++){
         if (users[i].email == value){
           return false;
         }
       }
       return true;
-
     }).withMessage("Usuario existente"),
     
   ],usersController.store); //Viaja pòr POST crea nuevo usuario

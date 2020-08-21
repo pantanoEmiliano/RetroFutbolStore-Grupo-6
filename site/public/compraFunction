@@ -37,7 +37,6 @@ class Carrito {
     //Leer datos del producto
      /*  leerDatosProducto(){
      
-
         const infoProducto = {
             image: producto.querySelector('img').src,
             nombre: producto.querySelector('h4').textContent,
@@ -53,7 +52,6 @@ class Carrito {
                 productosLS = productoLS.id;
             }
         });
-
         if(productosLS === infoProducto.id){
             Swal.fire({
                 type: 'info',
@@ -84,10 +82,8 @@ class Carrito {
             </td>
         `;
         listaProductos.appendChild(row);
-
         this.guardarProductosLocalStorage(producto);
       
-
     }
 */
     //Eliminar el producto del carrito en el DOM
@@ -106,7 +102,6 @@ class Carrito {
         this.eliminarProductoLocalStorage(productoID);
  
         this.calcularTotal();
-
     }
 */
  
@@ -125,7 +120,6 @@ class Carrito {
         //Agregamos al LS
         SessionStorage.setItem('productos', JSON.stringify(productos));
     }
-
         */
 
 
@@ -162,7 +156,6 @@ class Carrito {
             `;
             listaProductos.appendChild(row);
         });
-
     }
 */
     //Mostrar los productos guardados en el LS en compra.html
@@ -172,7 +165,7 @@ class Carrito {
         productosLS.forEach(function(producto){
             const row = document.createElement('tr');
             row.innerHTML = `
-                <td> <img src="./images/${producto.image}"> </td>
+                <td> <img src="${producto.image}"> </td>
                 
                 <td>${producto.nombre}</td>
                 <td>${producto.precio}</td>
@@ -268,7 +261,6 @@ class Carrito {
     //Procesar pedido
     procesarPedido(e){
         e.preventDefault();
-
         if(this.obtenerProductosLocalStorage().length === 0){
             Swal.fire({
                 type: 'error',
@@ -347,7 +339,6 @@ class Carrito {
        .catch(function(e) {
         console.log("Error! " + e);
         })  
-
 }*/
 
 
@@ -427,4 +418,3 @@ function procesarCompra(e) {
         //sessionStorage.clear(); 
     }   
 }    
-    

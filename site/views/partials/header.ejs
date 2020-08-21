@@ -1,16 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="/stylesheets/registo.css">
+	<link href="https://fonts.googleapis.com/css?family=Passion+One:700&display=swap" rel="stylesheet">
+	
+	<title>Productos</title>
+</head>
+<body>
+	
+	<body>
+		<div class="container-fluid" >
+		
+		  <div class="container">
+			<div class="row" id="fondo"> 
+			  <img src="/images/logoCam.png" id="logo" alt="" class="rounded-circle" width="20%">
+			  <div class="col 12"> </div>
+			<div class= ""> 
+			<% if(typeof ALoguearse != 'undefined') { %>
+			  <%= ALoguearse.email%>
+		  <%  } else { %>
+			  <h4>Aún no estas logueado. ¿Qué te parece si <a href="/login">lo haces?</a></h4>
+		  <% } %>
+		</div>
 
-    <div class="container-fluid">
-        <div class="container">
-            <div class="row" >
-                <div class="col 4"><img src="/images/logo-retro.jpg" alt="" class="rounded-circle" width="50%"> </div>
-                <div class="col-8"><h1 "id"="titulo"> RetroFutbolStore</h1></div>
-                
-            </div>
-    
-          <%- include("./partials/nuevomenu") %>
-          
+			</div>
+            <%- include("./nuevomenu") %>
+
           <!-- Tab panes -->
           
           </div>
